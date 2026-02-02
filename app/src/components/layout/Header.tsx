@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useI18n } from '@/i18n/I18nContext';
 import { Menu, X, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -27,6 +27,8 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const navigate = useNavigate();
+
   // Get current path without language prefix
   const currentPath = location.pathname.replace(/^\/(it|en)/, '') || '/';
 
@@ -49,14 +51,14 @@ export function Header() {
     setLanguage(newLang);
     // Navigate to same page in new language
     const newPath = `/${newLang}${currentPath}`;
-    window.location.href = newPath;
+    navigate(newPath);
   };
 
   return (
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-sm'
-          : 'bg-white'
+        ? 'bg-white/95 backdrop-blur-md shadow-sm'
+        : 'bg-white'
         }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -77,8 +79,8 @@ export function Header() {
                 key={item.path}
                 to={getLink(item.path)}
                 className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${currentPath === item.path
-                    ? 'text-amber-800 bg-amber-50'
-                    : 'text-gray-700 hover:text-amber-800 hover:bg-amber-50'
+                  ? 'text-amber-800 bg-amber-50'
+                  : 'text-gray-700 hover:text-amber-800 hover:bg-amber-50'
                   }`}
               >
                 {item.label}
@@ -152,8 +154,8 @@ export function Header() {
                             <Link
                               to={getLink(item.path)}
                               className={`block px-4 py-3 text-base font-medium rounded-md transition-colors ${currentPath === item.path
-                                  ? 'text-amber-800 bg-amber-50'
-                                  : 'text-gray-700 hover:text-amber-800 hover:bg-amber-50'
+                                ? 'text-amber-800 bg-amber-50'
+                                : 'text-gray-700 hover:text-amber-800 hover:bg-amber-50'
                                 }`}
                             >
                               {item.label}

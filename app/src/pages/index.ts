@@ -1,0 +1,10 @@
+export { HomePage } from './HomePage';
+export { AboutPage } from './AboutPage';
+export { BreadPage } from './BreadPage';
+export { FocacciaRomanaPage } from './FocacciaRomanaPage';
+export { FocacciaLigurePage } from './FocacciaLigurePage';
+export { OtherProductsPage } from './OtherProductsPage';
+export { SourdoughPage } from './SourdoughPage';
+export { WorkWithUsPage } from './WorkWithUsPage';
+export { ContactPage } from './ContactPage';
+export { NotFoundPage } from './NotFoundPage';

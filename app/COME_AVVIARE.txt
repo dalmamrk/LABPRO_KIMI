@@ -1,0 +1,126 @@
+================================================================================
+    LAB PRO WEBSITE - ISTRUZIONI PER AVVIO LOCALE
+================================================================================
+
+📍 PERCORSO PROGETTO
+--------------------------------------------------------------------------------
+/Users/marco/Desktop/LAB_PROject/LABPRO_KIMI/app
+
+
+🚀 PRIMO AVVIO (Solo la prima volta)
+--------------------------------------------------------------------------------
+
+1. Apri il Terminale
+
+2. Naviga nella cartella del progetto:
+   
+   cd /Users/marco/Desktop/LAB_PROject/LABPRO_KIMI/app
+
+3. Installa le dipendenze (richiede connessione internet):
+   
+   npm install
+
+   ⏱️ Tempo stimato: 1-2 minuti
+   ✅ Devi fare questo comando SOLO LA PRIMA VOLTA
+
+
+🔄 AVVIO NORMALE (Ogni volta che vuoi usare il sito)
+--------------------------------------------------------------------------------
+
+1. Apri il Terminale
+
+2. Naviga nella cartella del progetto:
+   
+   cd /Users/marco/Desktop/LAB_PROject/LABPRO_KIMI/app
+
+3. Avvia il server di sviluppo:
+   
+   npm run dev
+
+4. Attendi il messaggio:
+   
+   ➜  Local:   http://localhost:5173/
+
+5. Apri il browser e vai su:
+   
+   http://localhost:5173
+
+
+🛑 FERMARE IL SERVER
+--------------------------------------------------------------------------------
+
+Nel terminale dove hai avviato il server, premi:
+
+   Ctrl + C
+
+Conferma premendo di nuovo Ctrl + C se richiesto.
+
+
+🌐 ACCESSO AL SITO
+--------------------------------------------------------------------------------
+
+Una volta avviato il server, il sito è disponibile su:
+
+• Homepage Italiana:  http://localhost:5173/it
+• Homepage Inglese:   http://localhost:5173/en
+
+Il sito si auto-refresh quando modifichi i file (Hot Module Replacement).
+
+
+📦 BUILD PRODUZIONE (Per pubblicare il sito)
+--------------------------------------------------------------------------------
+
+1. Crea la versione ottimizzata per produzione:
+   
+   npm run build
+
+2. I file pronti per il deploy saranno in:
+   
+   /Users/marco/Desktop/LAB_PROject/LABPRO_KIMI/app/dist
+
+3. Per testare la build di produzione in locale:
+   
+   npm run preview
+
+
+⚠️ TROUBLESHOOTING
+--------------------------------------------------------------------------------
+
+PROBLEMA: "npm: command not found"
+SOLUZIONE: Installa Node.js da https://nodejs.org
+
+PROBLEMA: Porta 5173 già in uso
+SOLUZIONE: Chiudi altre istanze del server o cambia porta in vite.config.ts
+
+PROBLEMA: Errori dopo modifiche
+SOLUZIONE: Ferma il server (Ctrl+C) e riavvialo con "npm run dev"
+
+PROBLEMA: Pagina bianca
+SOLUZIONE: Controlla la console del browser (F12) per errori
+
+
+📞 INFORMAZIONI TECNICHE
+--------------------------------------------------------------------------------
+
+Framework:        React 18 + TypeScript
+Build Tool:       Vite 7.2.4
+Styling:          Tailwind CSS 3.4
+UI Components:    shadcn/ui (Radix UI)
+Routing:          React Router DOM v7
+Lingue:           Italiano (IT) e Inglese (EN)
+
+
+📝 NOTE
+--------------------------------------------------------------------------------
+
+• Il sito è SOLO locale fino a quando non fai il deploy
+• Le modifiche ai file si riflettono automaticamente nel browser
+• I file sorgente sono in: src/
+• Le immagini vanno in: public/images/
+• Le traduzioni sono in: src/i18n/translations.ts
+
+
+================================================================================
+Ultima modifica: 01/02/2026
+Per supporto tecnico: consultare README.md nella cartella del progetto
+================================================================================

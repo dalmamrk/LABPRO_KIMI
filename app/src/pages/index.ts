@@ -7,4 +7,6 @@ export { OtherProductsPage } from './OtherProductsPage';
 export { SourdoughPage } from './SourdoughPage';
 export { WorkWithUsPage } from './WorkWithUsPage';
 export { ContactPage } from './ContactPage';
+export { PrivacyPage } from './PrivacyPage';
+export { TermsPage } from './TermsPage';
 export { NotFoundPage } from './NotFoundPage';

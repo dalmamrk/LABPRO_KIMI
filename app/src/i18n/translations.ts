@@ -171,6 +171,13 @@ export interface Translations {
     privacy: string;
     terms: string;
   };
+  // Cookies
+  cookies: {
+    message: string;
+    privacyLink: string;
+    accept: string;
+    decline: string;
+  };
   // SEO
   seo: {
     siteTitle: string;
@@ -430,6 +437,12 @@ export const translations: Record<Language, Translations> = {
       privacy: 'Privacy Policy',
       terms: 'Termini e Condizioni',
     },
+    cookies: {
+      message: 'Utilizziamo cookie tecnici necessari per il funzionamento del sito. Nessun cookie di profilazione. Per maggiori informazioni, consulta la nostra',
+      privacyLink: 'Privacy Policy',
+      accept: 'Accetta',
+      decline: 'Rifiuta',
+    },
     seo: {
       siteTitle: 'LAB PRO - Prodotti da Forno Artigianali',
       siteDescription: 'Azienda italiana specializzata nella produzione di pane, focacce e prodotti da forno artigianali. Tradizione che guarda al futuro.',
@@ -580,7 +593,7 @@ export const translations: Record<Language, Translations> = {
       processDough: 'Selected flours, water, yeast, salt and extra virgin olive oil.',
       processLeavening: 'Controlled to develop aroma and structure.',
       processStretching: 'Manual, with the classic pressure of the fingers that creates the characteristic dimples.',
-      processBrine: 'Water, oil and salt distributed evenly before baking.',
+      processBrine: 'Water, oil and salt distributed uniformly before baking.',
       processBaking: 'Hot oven for uniform browning and a fragrant surface.',
       characteristicsTitle: 'Characteristics',
       characteristicsList: [
@@ -685,6 +698,12 @@ export const translations: Record<Language, Translations> = {
       rights: '© 2025 LAB PRO S.r.l. All rights reserved.',
       privacy: 'Privacy Policy',
       terms: 'Terms and Conditions',
+    },
+    cookies: {
+      message: 'We use technical cookies necessary for site operation. No profiling cookies. For more information, see our',
+      privacyLink: 'Privacy Policy',
+      accept: 'Accept',
+      decline: 'Decline',
     },
     seo: {
       siteTitle: 'LAB PRO - Artisan Bakery Products',

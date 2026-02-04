@@ -1,6 +1,7 @@
 import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { I18nProvider } from '@/i18n/I18nContext';
 import { Layout } from '@/components/layout/Layout';
+import { ScrollToTop } from '@/components/ui/ScrollToTop';
 import {
   HomePage,
   AboutPage,
@@ -11,6 +12,8 @@ import {
   SourdoughPage,
   WorkWithUsPage,
   ContactPage,
+  PrivacyPage,
+  TermsPage,
   NotFoundPage,
 } from '@/pages';
 import type { Language } from '@/i18n/translations';
@@ -26,6 +29,8 @@ const routeConfig = [
   { path: '/lievito-madre', element: SourdoughPage },
   { path: '/lavora-con-noi', element: WorkWithUsPage },
   { path: '/contatti', element: ContactPage },
+  { path: '/privacy', element: PrivacyPage },
+  { path: '/termini', element: TermsPage },
 ];
 
 interface LanguageRoutesProps {
@@ -35,6 +40,7 @@ interface LanguageRoutesProps {
 function LanguageRoutes({ lang }: LanguageRoutesProps) {
   return (
     <I18nProvider initialLang={lang}>
+      <ScrollToTop />
       <Layout>
         <Routes>
           {routeConfig.map((route) => (

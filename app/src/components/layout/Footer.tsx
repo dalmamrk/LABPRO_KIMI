@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import { useI18n } from '@/i18n/I18nContext';
-import { Mail, MapPin, Clock } from 'lucide-react';
+import { Mail, MapPin, Clock, Instagram } from 'lucide-react';
 
 export function Footer() {
   const { t, language } = useI18n();
-  
+
   const getLink = (path: string) => `/${language}${path}`;
 
   const quickLinks = [
@@ -39,8 +39,8 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2 text-sm">
                 <Mail className="h-4 w-4 flex-shrink-0 text-amber-400" aria-hidden="true" />
-                <a 
-                  href="mailto:info@lab-pro.it" 
+                <a
+                  href="mailto:info@lab-pro.it"
                   className="hover:text-white transition-colors"
                 >
                   info@lab-pro.it
@@ -103,7 +103,7 @@ export function Footer() {
               </div>
               <div>
                 <span className="text-amber-400 block">{t.contact.pecLabel}</span>
-                <a 
+                <a
                   href={`mailto:${t.contact.pecValue}`}
                   className="hover:text-white transition-colors"
                 >
@@ -117,6 +117,19 @@ export function Footer() {
                 >
                   {language === 'it' ? 'Scrivici' : 'Write to us'}
                 </Link>
+              </div>
+              <div className="pt-2">
+                <span className="text-amber-400 block mb-2">{language === 'it' ? 'Seguici' : 'Follow Us'}</span>
+                <a
+                  href="https://www.instagram.com/lab_pro_/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-3 py-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white text-sm font-medium rounded-md transition-all hover:scale-105"
+                  aria-label="Instagram LAB PRO"
+                >
+                  <Instagram className="h-4 w-4" aria-hidden="true" />
+                  Instagram
+                </a>
               </div>
             </div>
           </div>

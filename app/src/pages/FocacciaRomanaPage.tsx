@@ -83,7 +83,7 @@ export function FocacciaRomanaPage() {
             {t.focacciaRomana.whatIsList.map((item, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg p-6 shadow-sm border border-stone-100 flex items-start gap-4"
+                className="bg-white rounded-lg p-6 shadow-sm border border-stone-100 flex flex-col sm:flex-row items-center sm:items-start gap-4 text-center sm:text-left"
               >
                 <div className="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
                   <Check className="h-4 w-4 text-amber-800" aria-hidden="true" />
@@ -107,9 +107,9 @@ export function FocacciaRomanaPage() {
             {processSteps.map((step, index) => (
               <div
                 key={index}
-                className="relative bg-stone-50 rounded-xl p-6"
+                className="relative bg-stone-50 rounded-xl p-6 text-center sm:text-left"
               >
-                <div className="flex items-center gap-3 mb-4">
+                <div className="flex flex-col sm:flex-row items-center sm:items-center gap-3 mb-4">
                   <span className="w-8 h-8 bg-amber-800 text-white rounded-full flex items-center justify-center text-sm font-bold">
                     {index + 1}
                   </span>

@@ -88,9 +88,9 @@ export function SourdoughPage() {
               return (
                 <div
                   key={index}
-                  className="bg-white rounded-xl p-6 shadow-sm border border-stone-100 hover:shadow-md transition-shadow"
+                  className="bg-white rounded-xl p-6 shadow-sm border border-stone-100 hover:shadow-md transition-shadow text-center md:text-left"
                 >
-                  <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4 mx-auto md:mx-0">
                     <Icon className="h-6 w-6 text-amber-800" aria-hidden="true" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">

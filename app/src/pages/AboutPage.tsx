@@ -57,8 +57,8 @@ export function AboutPage() {
                 <p>{t.about.traditionText2}</p>
               </div>
             </div>
-            <div className="bg-amber-50 rounded-xl p-8">
-              <div className="w-16 h-16 bg-amber-100 rounded-lg flex items-center justify-center mb-6">
+            <div className="bg-amber-50 rounded-xl p-8 text-center lg:text-left">
+              <div className="w-16 h-16 bg-amber-100 rounded-lg flex items-center justify-center mb-6 mx-auto lg:mx-0">
                 <Target className="h-8 w-8 text-amber-800" aria-hidden="true" />
               </div>
               <blockquote className="text-lg text-gray-800 italic">
@@ -90,15 +90,15 @@ export function AboutPage() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div className="order-2 lg:order-1 bg-amber-50 rounded-xl p-8">
-              <div className="w-16 h-16 bg-amber-100 rounded-lg flex items-center justify-center mb-6">
+            <div className="order-2 lg:order-1 bg-amber-50 rounded-xl p-8 text-center lg:text-left">
+              <div className="w-16 h-16 bg-amber-100 rounded-lg flex items-center justify-center mb-6 mx-auto lg:mx-0">
                 <Lightbulb className="h-8 w-8 text-amber-800" aria-hidden="true" />
               </div>
               <ul className="space-y-4">
                 {t.about.innovationList.map((item, index) => (
-                  <li key={index} className="flex items-start gap-3">
+                  <li key={index} className="flex items-start gap-3 justify-center lg:justify-start">
                     <Check className="h-5 w-5 text-amber-600 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                    <span className="text-gray-700">{item}</span>
+                    <span className="text-gray-700 text-left">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -130,7 +130,7 @@ export function AboutPage() {
             {t.about.businessList.map((item, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg p-6 shadow-sm border border-stone-100 flex items-center gap-4"
+                className="bg-white rounded-lg p-6 shadow-sm border border-stone-100 flex flex-col sm:flex-row items-center sm:items-center gap-4 text-center sm:text-left"
               >
                 <div className="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
                   <Users className="h-5 w-5 text-amber-800" aria-hidden="true" />

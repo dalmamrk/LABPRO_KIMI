@@ -38,12 +38,6 @@ export function VideoHero() {
                 Your browser does not support the video tag.
             </video>
 
-            {/* Dark Gradient Overlay */}
-            <div
-                className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/40"
-                aria-hidden="true"
-            />
-
             {/* Content Container */}
             <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
                 <div className="max-w-4xl text-center">

@@ -5,8 +5,8 @@ import { Wheat, Droplets, Flame, Circle, Check, Clock, Utensils, Package } from 
 
 // Images
 import paneHeroLoaf from '@/assets/images/pane-hero-loaf.webp';
+import farina from '@/assets/images/farina.webp';
 import introDough from '@/assets/images/home-intro-dough.webp';
-import sourdoughStarter from '@/assets/images/sourdough-starter.webp';
 import paneSlicing from '@/assets/images/pane-slicing-detail.webp';
 import paneBasket from '@/assets/images/pane-basket.webp';
 
@@ -27,7 +27,7 @@ export function BreadPage() {
       list: t.bread.pillar1List,
       conclusion: t.bread.pillar1Conclusion,
       icon: Wheat,
-      image: introDough,
+      image: farina,
     },
     {
       number: '02',
@@ -37,7 +37,7 @@ export function BreadPage() {
       list: t.bread.pillar2List,
       conclusion: t.bread.pillar2Conclusion,
       icon: Flame,
-      image: sourdoughStarter,
+      image: introDough,
     },
     {
       number: '03',

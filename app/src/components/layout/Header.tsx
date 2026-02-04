@@ -3,6 +3,9 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useI18n } from '@/i18n/I18nContext';
 import { Menu, X, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+
+// Logo
+import labProLogo from '@/assets/images/Logo_labpro.webp';
 import {
   Sheet,
   SheetContent,
@@ -66,10 +69,14 @@ export function Header() {
           {/* Logo */}
           <Link
             to={getLink('/')}
-            className="flex items-center gap-2 text-xl font-bold text-amber-800 hover:text-amber-700 transition-colors"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
             aria-label="LAB PRO Home"
           >
-            <span className="text-2xl">LAB PRO</span>
+            <img
+              src={labProLogo}
+              alt="LAB PRO"
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -122,7 +129,13 @@ export function Header() {
                 <div className="flex flex-col h-full">
                   {/* Mobile Header */}
                   <div className="flex items-center justify-between py-4 border-b">
-                    <span className="text-xl font-bold text-amber-800">LAB PRO</span>
+                    <div className="flex items-center">
+                      <img
+                        src={labProLogo}
+                        alt="LAB PRO"
+                        className="h-10 w-auto"
+                      />
+                    </div>
                     <SheetClose asChild>
                       <Button variant="ghost" size="icon" aria-label="Close menu">
                         <X className="h-5 w-5" aria-hidden="true" />

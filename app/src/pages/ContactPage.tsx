@@ -65,8 +65,8 @@ export function ContactPage() {
               {t.contact.title}
             </h1>
             <p className="text-xl text-amber-200">
-              {language === 'it' 
-                ? 'Siamo qui per rispondere alle tue domande' 
+              {language === 'it'
+                ? 'Siamo qui per rispondere alle tue domande'
                 : 'We are here to answer your questions'}
             </p>
           </div>
@@ -81,21 +81,17 @@ export function ContactPage() {
               {contactInfo.map((item, index) => (
                 <div
                   key={index}
-                  className={`flex items-start gap-4 ${
-                    item.isHeader ? 'pb-4 border-b border-stone-200' : ''
-                  }`}
+                  className={`flex items-start gap-4 ${item.isHeader ? 'pb-4 border-b border-stone-200' : ''
+                    }`}
                 >
-                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
-                    item.isHeader ? 'bg-amber-800' : 'bg-amber-100'
-                  }`}>
-                    <item.icon className={`h-5 w-5 ${
-                      item.isHeader ? 'text-white' : 'text-amber-800'
-                    }`} aria-hidden="true" />
+                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${item.isHeader ? 'bg-amber-800' : 'bg-amber-100'
+                    }`}>
+                    <item.icon className={`h-5 w-5 ${item.isHeader ? 'text-white' : 'text-amber-800'
+                      }`} aria-hidden="true" />
                   </div>
                   <div>
-                    <span className={`block text-sm ${
-                      item.isHeader ? 'text-gray-500' : 'text-gray-500'
-                    }`}>
+                    <span className={`block text-sm ${item.isHeader ? 'text-gray-500' : 'text-gray-500'
+                      }`}>
                       {item.label}
                     </span>
                     {item.value && (
@@ -118,7 +114,7 @@ export function ContactPage() {
         </div>
       </section>
 
-      {/* Map Placeholder Section */}
+      {/* Map Section */}
       <section className="py-16 lg:py-24 bg-stone-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
@@ -129,13 +125,29 @@ export function ContactPage() {
               {t.contact.addressValue}
             </p>
           </div>
-          <div className="bg-stone-200 rounded-xl aspect-video flex items-center justify-center">
-            <div className="text-center">
-              <MapPin className="h-12 w-12 text-stone-400 mx-auto mb-4" aria-hidden="true" />
-              <p className="text-stone-500">
-                {language === 'it' ? 'Mappa in arrivo' : 'Map coming soon'}
-              </p>
-            </div>
+          <div className="bg-white rounded-xl overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2817.6892158849855!2d7.730861476586914!3d45.10236487107201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47886d8f5e5e5e5f%3A0x5e5e5e5e5e5e5e5e!2sVia%20Jonio%2C%205%2C%2010138%20Torino%20TO!5e0!3m2!1sit!2sit!4v1644000000000!5m2!1sit!2sit"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title={language === 'it' ? 'Mappa LAB PRO' : 'LAB PRO Map'}
+              className="w-full"
+            ></iframe>
+          </div>
+          <div className="mt-6 text-center">
+            <a
+              href="https://www.google.com/maps/dir//Via+Jonio,+5,+10138+Torino+TO"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-lg transition-colors"
+            >
+              <MapPin className="h-5 w-5" aria-hidden="true" />
+              {language === 'it' ? 'Ottieni indicazioni' : 'Get directions'}
+            </a>
           </div>
         </div>
       </section>

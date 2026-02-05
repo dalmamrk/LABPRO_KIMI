@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useI18n } from '@/i18n/I18nContext';
 import { SEO } from '@/components/seo/SEO';
-import { Button } from '@/components/ui/button';
 import { ArrowRight, Wheat, Flame, Droplets, Circle } from 'lucide-react';
 
 import { VideoHero } from '@/components/ui/VideoHero';
@@ -140,7 +139,7 @@ export function HomePage() {
               <Link
                 key={index}
                 to={getLink(product.link)}
-                className="group block bg-stone-50 rounded-xl overflow-hidden border border-stone-100 hover:shadow-lg transition-all"
+                className="group block bg-stone-50 rounded-xl overflow-hidden border border-stone-100 transition-all"
               >
                 <div className="aspect-[4/3] bg-amber-100 relative overflow-hidden">
                   <img
@@ -157,9 +156,9 @@ export function HomePage() {
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">
                     {product.description}
                   </p>
-                  <span className="inline-flex items-center text-amber-800 font-medium text-sm group-hover:underline">
+                  <span className="inline-flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-amber-600 to-amber-700 text-white font-semibold text-sm rounded-lg shadow-md hover:shadow-lg hover:from-amber-700 hover:to-amber-800 transition-all duration-300 group/btn">
                     {language === 'it' ? 'Scopri di più' : 'Learn more'}
-                    <ArrowRight className="ml-1 h-4 w-4" aria-hidden="true" />
+                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" aria-hidden="true" />
                   </span>
                 </div>
               </Link>
@@ -185,16 +184,10 @@ export function HomePage() {
               <p className="text-lg text-amber-100 leading-relaxed mb-8">
                 {t.about.traditionText2}
               </p>
-              <Button
-                asChild
-                size="lg"
-                className="bg-white text-amber-900 hover:bg-amber-50 font-semibold"
-              >
-                <Link to={getLink('/chi-siamo')}>
-                  {language === 'it' ? 'Scopri la nostra storia' : 'Discover our story'}
-                  <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
-                </Link>
-              </Button>
+              <Link to={getLink('/chi-siamo')} className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-600 to-amber-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg hover:from-amber-700 hover:to-amber-800 transition-all duration-300 group/btn">
+                {language === 'it' ? 'Scopri la nostra storia' : 'Discover our story'}
+                <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover/btn:translate-x-1" aria-hidden="true" />
+              </Link>
             </div>
             <div className="relative">
               <div className="aspect-[4/3] bg-amber-800 rounded-xl overflow-hidden">
@@ -230,16 +223,10 @@ export function HomePage() {
               ? 'Siamo sempre alla ricerca di persone motivate che condividano i nostri valori'
               : 'We are always looking for motivated people who share our values'}
           </p>
-          <Button
-            asChild
-            size="lg"
-            className="bg-amber-800 text-white hover:bg-amber-700"
-          >
-            <Link to={getLink('/lavora-con-noi')}>
-              {language === 'it' ? 'Scopri le opportunità' : 'Discover opportunities'}
-              <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
-            </Link>
-          </Button>
+          <Link to={getLink('/lavora-con-noi')} className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-600 to-amber-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg hover:from-amber-700 hover:to-amber-800 transition-all duration-300 group/btn">
+            {language === 'it' ? 'Scopri le opportunità' : 'Discover opportunities'}
+            <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover/btn:translate-x-1" aria-hidden="true" />
+          </Link>
         </div>
       </section>
     </>

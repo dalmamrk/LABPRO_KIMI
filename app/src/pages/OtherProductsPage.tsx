@@ -134,7 +134,7 @@ export function OtherProductsPage() {
           </p>
           <a
             href={`/${language}/contatti`}
-            className="inline-flex items-center px-6 py-3 bg-white text-amber-900 font-semibold rounded-lg hover:bg-amber-50 transition-colors"
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-amber-600 to-amber-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg hover:from-amber-700 hover:to-amber-800 transition-all duration-300"
           >
             {language === 'it' ? 'Contattaci' : 'Contact us'}
           </a>

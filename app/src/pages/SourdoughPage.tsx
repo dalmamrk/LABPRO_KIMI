@@ -120,13 +120,13 @@ export function SourdoughPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href={`/${language}/pane-naturale`}
-              className="inline-flex items-center justify-center px-6 py-3 bg-white text-amber-900 font-semibold rounded-lg hover:bg-amber-50 transition-colors"
+              className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-amber-600 to-amber-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg hover:from-amber-700 hover:to-amber-800 transition-all duration-300"
             >
               {t.nav.bread}
             </a>
             <a
               href={`/${language}/focaccia-romana`}
-              className="inline-flex items-center justify-center px-6 py-3 border border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors"
+              className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-amber-600 to-amber-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg hover:from-amber-700 hover:to-amber-800 transition-all duration-300"
             >
               {t.nav.focacciaRomana}
             </a>

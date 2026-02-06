@@ -82,7 +82,7 @@ export function BreadPage() {
       <BreadcrumbJsonLd items={breadcrumbs} />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-amber-800 to-amber-900 text-white py-16 lg:py-24 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-terracotta-500 to-terracotta-600 text-white py-16 lg:py-24 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
@@ -90,7 +90,7 @@ export function BreadPage() {
             alt="Natural bread loaf"
             className="w-full h-full object-cover opacity-20 mix-blend-overlay"
           />
-          <div className="absolute inset-0 bg-amber-900/60 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-terracotta-600/60 mix-blend-multiply" />
         </div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -123,14 +123,14 @@ export function BreadPage() {
               >
                 <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
                   <div className="flex items-center gap-4 mb-4">
-                    <span className="text-5xl font-bold text-amber-200">
+                    <span className="text-5xl font-bold text-terracotta-200">
                       {pillar.number}
                     </span>
-                    <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center">
-                      <pillar.icon className="h-6 w-6 text-amber-800" aria-hidden="true" />
+                    <div className="w-12 h-12 bg-terracotta-100 rounded-lg flex items-center justify-center">
+                      <pillar.icon className="h-6 w-6 text-terracotta-500" aria-hidden="true" />
                     </div>
                   </div>
-                  <h2 className="text-xl text-amber-800 font-semibold mb-2">
+                  <h2 className="text-xl text-terracotta-500 font-semibold mb-2">
                     {pillar.title}
                   </h2>
                   <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
@@ -143,7 +143,7 @@ export function BreadPage() {
                     <ul className="space-y-2 mb-6">
                       {pillar.list.map((item, i) => (
                         <li key={i} className="flex items-start gap-2">
-                          <Check className="h-5 w-5 text-amber-600 mt-0.5 flex-shrink-0" aria-hidden="true" />
+                          <Check className="h-5 w-5 text-terracotta-500 mt-0.5 flex-shrink-0" aria-hidden="true" />
                           <span className="text-gray-700">{item}</span>
                         </li>
                       ))}
@@ -197,7 +197,7 @@ export function BreadPage() {
                 key={index}
                 className="bg-white rounded-xl p-6 shadow-sm border border-stone-100"
               >
-                <h3 className="text-lg font-semibold text-amber-800 mb-3">
+                <h3 className="text-lg font-semibold text-terracotta-500 mb-3">
                   {faq.q}
                 </h3>
                 <p className="text-gray-700 leading-relaxed">{faq.a}</p>
@@ -208,7 +208,7 @@ export function BreadPage() {
       </section>
 
       {/* Tips Section */}
-      <section className="py-16 lg:py-24 bg-amber-900 text-white">
+      <section className="py-16 lg:py-24 bg-terracotta-600 text-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4">
@@ -219,10 +219,10 @@ export function BreadPage() {
             {tips.map((tip, index) => (
               <div
                 key={index}
-                className="bg-amber-800/50 rounded-lg p-6 flex items-start gap-4"
+                className="bg-terracotta-500/50 rounded-lg p-6 flex items-start gap-4"
               >
-                <tip.icon className="h-5 w-5 text-amber-300 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                <span className="text-amber-100">{tip.text}</span>
+                <tip.icon className="h-5 w-5 text-terracotta-300 mt-0.5 flex-shrink-0" aria-hidden="true" />
+                <span className="text-terracotta-100">{tip.text}</span>
               </div>
             ))}
           </div>

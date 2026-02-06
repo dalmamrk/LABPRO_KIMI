@@ -78,7 +78,7 @@
   }
   /* Focus visible styles for accessibility */
   :focus-visible {
-    @apply outline-none ring-2 ring-amber-500 ring-offset-2;
+    @apply outline-none ring-2 ring-terracotta-500 ring-offset-2;
   }
   /* Reduced motion preference */
   @media (prefers-reduced-motion: reduce) {
@@ -108,7 +108,7 @@
   }
   /* Skip link for accessibility */
   .skip-link {
-    @apply absolute -top-10 left-4 z-50 bg-amber-800 text-white px-4 py-2 rounded transition-all;
+    @apply absolute -top-10 left-4 z-50 bg-terracotta-600 text-white px-4 py-2 rounded transition-all;
   }
   .skip-link:focus {
     @apply top-4;

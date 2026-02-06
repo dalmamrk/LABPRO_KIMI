@@ -12,16 +12,16 @@ export function PrivacyPage() {
             <SEO title={t.footer.privacy} />
 
             {/* Hero Section */}
-            <section className="bg-gradient-to-br from-amber-800 to-amber-900 text-white py-16 lg:py-24">
+            <section className="bg-gradient-to-br from-terracotta-500 to-terracotta-600 text-white py-16 lg:py-24">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="max-w-3xl">
-                        <div className="w-16 h-16 bg-amber-100 rounded-lg flex items-center justify-center mb-6">
-                            <Shield className="h-8 w-8 text-amber-800" aria-hidden="true" />
+                        <div className="w-16 h-16 bg-terracotta-100 rounded-lg flex items-center justify-center mb-6">
+                            <Shield className="h-8 w-8 text-terracotta-500" aria-hidden="true" />
                         </div>
                         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
                             {t.footer.privacy}
                         </h1>
-                        <p className="text-lg text-amber-100">
+                        <p className="text-lg text-terracotta-100">
                             {lastUpdated}
                         </p>
                     </div>
@@ -47,7 +47,7 @@ export function PrivacyPage() {
                         {/* Data Controller */}
                         <div className="mb-12">
                             <div className="flex items-start gap-3 mb-4">
-                                <Lock className="h-6 w-6 text-amber-600 mt-1 flex-shrink-0" aria-hidden="true" />
+                                <Lock className="h-6 w-6 text-terracotta-500 mt-1 flex-shrink-0" aria-hidden="true" />
                                 <h2 className="text-2xl font-bold text-gray-900">
                                     {language === 'it' ? 'Titolare del Trattamento' : 'Data Controller'}
                                 </h2>
@@ -57,10 +57,10 @@ export function PrivacyPage() {
                                 <p className="text-gray-700">Via Jonio 5, 10138 – Torino</p>
                                 <p className="text-gray-700">P.IVA: 13007570016</p>
                                 <p className="text-gray-700">
-                                    Email: <a href="mailto:info@lab-pro.it" className="text-amber-700 hover:text-amber-800">info@lab-pro.it</a>
+                                    Email: <a href="mailto:info@lab-pro.it" className="text-terracotta-600 hover:text-terracotta-500">info@lab-pro.it</a>
                                 </p>
                                 <p className="text-gray-700">
-                                    PEC: <a href="mailto:labpro@pec.it" className="text-amber-700 hover:text-amber-800">labpro@pec.it</a>
+                                    PEC: <a href="mailto:labpro@pec.it" className="text-terracotta-600 hover:text-terracotta-500">labpro@pec.it</a>
                                 </p>
                             </div>
                         </div>
@@ -68,7 +68,7 @@ export function PrivacyPage() {
                         {/* Data We Collect */}
                         <div className="mb-12">
                             <div className="flex items-start gap-3 mb-4">
-                                <Eye className="h-6 w-6 text-amber-600 mt-1 flex-shrink-0" aria-hidden="true" />
+                                <Eye className="h-6 w-6 text-terracotta-500 mt-1 flex-shrink-0" aria-hidden="true" />
                                 <h2 className="text-2xl font-bold text-gray-900">
                                     {language === 'it' ? 'Dati Raccolti' : 'Data We Collect'}
                                 </h2>
@@ -80,7 +80,7 @@ export function PrivacyPage() {
                             </p>
                             <ul className="space-y-2">
                                 <li className="flex items-start gap-2">
-                                    <span className="text-amber-600 mt-1">•</span>
+                                    <span className="text-terracotta-500 mt-1">•</span>
                                     <span className="text-gray-700">
                                         {language === 'it'
                                             ? 'Dati di navigazione (indirizzo IP, browser, sistema operativo)'
@@ -88,7 +88,7 @@ export function PrivacyPage() {
                                     </span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-amber-600 mt-1">•</span>
+                                    <span className="text-terracotta-500 mt-1">•</span>
                                     <span className="text-gray-700">
                                         {language === 'it'
                                             ? 'Dati forniti volontariamente (nome, email, messaggio in caso di contatto)'
@@ -96,7 +96,7 @@ export function PrivacyPage() {
                                     </span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-amber-600 mt-1">•</span>
+                                    <span className="text-terracotta-500 mt-1">•</span>
                                     <span className="text-gray-700">
                                         {language === 'it'
                                             ? 'Cookie tecnici necessari al funzionamento del sito'
@@ -118,7 +118,7 @@ export function PrivacyPage() {
                             </p>
                             <ul className="space-y-3">
                                 <li className="flex items-start gap-2">
-                                    <span className="text-amber-600 mt-1 font-bold">1.</span>
+                                    <span className="text-terracotta-500 mt-1 font-bold">1.</span>
                                     <span className="text-gray-700">
                                         {language === 'it'
                                             ? 'Garantire il corretto funzionamento del sito web'
@@ -126,7 +126,7 @@ export function PrivacyPage() {
                                     </span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-amber-600 mt-1 font-bold">2.</span>
+                                    <span className="text-terracotta-500 mt-1 font-bold">2.</span>
                                     <span className="text-gray-700">
                                         {language === 'it'
                                             ? 'Rispondere a richieste di informazioni o contatti'
@@ -134,7 +134,7 @@ export function PrivacyPage() {
                                     </span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-amber-600 mt-1 font-bold">3.</span>
+                                    <span className="text-terracotta-500 mt-1 font-bold">3.</span>
                                     <span className="text-gray-700">
                                         {language === 'it'
                                             ? 'Migliorare l\'esperienza di navigazione'
@@ -142,7 +142,7 @@ export function PrivacyPage() {
                                     </span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-amber-600 mt-1 font-bold">4.</span>
+                                    <span className="text-terracotta-500 mt-1 font-bold">4.</span>
                                     <span className="text-gray-700">
                                         {language === 'it'
                                             ? 'Adempiere a obblighi di legge'
@@ -188,7 +188,7 @@ export function PrivacyPage() {
                             </p>
                             <ul className="space-y-2">
                                 <li className="flex items-start gap-2">
-                                    <span className="text-amber-600 mt-1">•</span>
+                                    <span className="text-terracotta-500 mt-1">•</span>
                                     <span className="text-gray-700">
                                         {language === 'it'
                                             ? 'Accedere ai propri dati personali'
@@ -196,7 +196,7 @@ export function PrivacyPage() {
                                     </span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-amber-600 mt-1">•</span>
+                                    <span className="text-terracotta-500 mt-1">•</span>
                                     <span className="text-gray-700">
                                         {language === 'it'
                                             ? 'Richiedere la rettifica di dati inesatti'
@@ -204,7 +204,7 @@ export function PrivacyPage() {
                                     </span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-amber-600 mt-1">•</span>
+                                    <span className="text-terracotta-500 mt-1">•</span>
                                     <span className="text-gray-700">
                                         {language === 'it'
                                             ? 'Richiedere la cancellazione dei dati ("diritto all\'oblio")'
@@ -212,7 +212,7 @@ export function PrivacyPage() {
                                     </span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-amber-600 mt-1">•</span>
+                                    <span className="text-terracotta-500 mt-1">•</span>
                                     <span className="text-gray-700">
                                         {language === 'it'
                                             ? 'Limitare il trattamento dei dati'
@@ -220,7 +220,7 @@ export function PrivacyPage() {
                                     </span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-amber-600 mt-1">•</span>
+                                    <span className="text-terracotta-500 mt-1">•</span>
                                     <span className="text-gray-700">
                                         {language === 'it'
                                             ? 'Ricevere i dati in formato strutturato (portabilità)'
@@ -228,7 +228,7 @@ export function PrivacyPage() {
                                     </span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-amber-600 mt-1">•</span>
+                                    <span className="text-terracotta-500 mt-1">•</span>
                                     <span className="text-gray-700">
                                         {language === 'it'
                                             ? 'Opporsi al trattamento'
@@ -236,7 +236,7 @@ export function PrivacyPage() {
                                     </span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-amber-600 mt-1">•</span>
+                                    <span className="text-terracotta-500 mt-1">•</span>
                                     <span className="text-gray-700">
                                         {language === 'it'
                                             ? 'Revocare il consenso in qualsiasi momento'
@@ -273,7 +273,7 @@ export function PrivacyPage() {
                         {/* Contact */}
                         <div className="mb-12">
                             <div className="flex items-start gap-3 mb-4">
-                                <Mail className="h-6 w-6 text-amber-600 mt-1 flex-shrink-0" aria-hidden="true" />
+                                <Mail className="h-6 w-6 text-terracotta-500 mt-1 flex-shrink-0" aria-hidden="true" />
                                 <h2 className="text-2xl font-bold text-gray-900">
                                     {language === 'it' ? 'Contatti' : 'Contact'}
                                 </h2>
@@ -283,12 +283,12 @@ export function PrivacyPage() {
                                     ? 'Per esercitare i propri diritti o per qualsiasi richiesta relativa al trattamento dei dati personali, è possibile contattare LAB PRO ai seguenti recapiti:'
                                     : 'To exercise your rights or for any request related to the processing of personal data, you can contact LAB PRO at the following addresses:'}
                             </p>
-                            <div className="bg-amber-50 rounded-lg p-6">
+                            <div className="bg-terracotta-50 rounded-lg p-6">
                                 <p className="text-gray-700">
-                                    Email: <a href="mailto:info@lab-pro.it" className="text-amber-700 hover:text-amber-800 font-medium">info@lab-pro.it</a>
+                                    Email: <a href="mailto:info@lab-pro.it" className="text-terracotta-600 hover:text-terracotta-500 font-medium">info@lab-pro.it</a>
                                 </p>
                                 <p className="text-gray-700">
-                                    PEC: <a href="mailto:labpro@pec.it" className="text-amber-700 hover:text-amber-800 font-medium">labpro@pec.it</a>
+                                    PEC: <a href="mailto:labpro@pec.it" className="text-terracotta-600 hover:text-terracotta-500 font-medium">labpro@pec.it</a>
                                 </p>
                             </div>
                         </div>

@@ -5,6 +5,7 @@ export interface Translations {
   nav: {
     home: string;
     about: string;
+    products: string;
     bread: string;
     focacciaRomana: string;
     focacciaLigure: string;
@@ -190,6 +191,7 @@ export const translations: Record<Language, Translations> = {
     nav: {
       home: 'Home',
       about: 'Chi Siamo',
+      products: 'Prodotti',
       bread: 'Il Nostro Pane',
       focacciaRomana: 'Focaccia Romana',
       focacciaLigure: 'Focaccia Ligure',
@@ -452,6 +454,7 @@ export const translations: Record<Language, Translations> = {
     nav: {
       home: 'Home',
       about: 'About Us',
+      products: 'Products',
       bread: 'Our Natural Bread',
       focacciaRomana: 'Roman Focaccia',
       focacciaLigure: 'Ligurian Focaccia',

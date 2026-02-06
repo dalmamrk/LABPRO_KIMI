@@ -16,8 +16,8 @@ export function NotFoundPage() {
       
       <section className="min-h-[60vh] flex items-center justify-center py-16 lg:py-24">
         <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 text-center">
-          <div className="w-24 h-24 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-8">
-            <Search className="h-12 w-12 text-amber-800" aria-hidden="true" />
+          <div className="w-24 h-24 bg-terracotta-100 rounded-full flex items-center justify-center mx-auto mb-8">
+            <Search className="h-12 w-12 text-terracotta-500" aria-hidden="true" />
           </div>
           
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
@@ -37,7 +37,7 @@ export function NotFoundPage() {
           <Button
             asChild
             size="lg"
-            className="bg-amber-800 text-white hover:bg-amber-700"
+            className="bg-terracotta-500 text-white hover:bg-terracotta-600"
           >
             <Link to={`/${language}/`}>
               <Home className="mr-2 h-5 w-5" aria-hidden="true" />

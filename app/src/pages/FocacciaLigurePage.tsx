@@ -29,7 +29,7 @@ export function FocacciaLigurePage() {
       <BreadcrumbJsonLd items={breadcrumbs} />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-amber-800 to-amber-900 text-white py-16 lg:py-24 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-terracotta-500 to-terracotta-600 text-white py-16 lg:py-24 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
@@ -37,7 +37,7 @@ export function FocacciaLigurePage() {
             alt="Focaccia Ligure"
             className="w-full h-full object-cover opacity-20 mix-blend-overlay"
           />
-          <div className="absolute inset-0 bg-amber-900/60 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-terracotta-600/60 mix-blend-multiply" />
         </div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -45,7 +45,7 @@ export function FocacciaLigurePage() {
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
               {t.focacciaLigure.title}
             </h1>
-            <p className="text-xl text-amber-200 mb-6">
+            <p className="text-xl text-terracotta-200 mb-6">
               {t.focacciaLigure.subtitle}
             </p>
           </div>
@@ -86,8 +86,8 @@ export function FocacciaLigurePage() {
                 key={index}
                 className="bg-white rounded-lg p-6 shadow-sm border border-stone-100 flex flex-col sm:flex-row items-center sm:items-start gap-4 text-center sm:text-left"
               >
-                <div className="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Check className="h-4 w-4 text-amber-800" aria-hidden="true" />
+                <div className="w-8 h-8 bg-terracotta-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Check className="h-4 w-4 text-terracotta-500" aria-hidden="true" />
                 </div>
                 <span className="text-gray-700 font-medium">{item}</span>
               </div>
@@ -111,7 +111,7 @@ export function FocacciaLigurePage() {
                 className="bg-stone-50 rounded-xl p-5 text-center sm:text-left"
               >
                 <div className="flex flex-col sm:flex-row items-center sm:items-center gap-2 mb-3">
-                  <span className="w-7 h-7 bg-amber-800 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                  <span className="w-7 h-7 bg-terracotta-500 text-white rounded-full flex items-center justify-center text-sm font-bold">
                     {index + 1}
                   </span>
                   <h3 className="font-semibold text-gray-900 text-sm">{step.title}</h3>
@@ -135,7 +135,7 @@ export function FocacciaLigurePage() {
             <ul className="space-y-4">
               {t.focacciaLigure.characteristicsList.map((item, index) => (
                 <li key={index} className="flex items-center gap-3">
-                  <Circle className="h-2 w-2 text-amber-600 fill-amber-600" aria-hidden="true" />
+                  <Circle className="h-2 w-2 text-terracotta-500 fill-terracotta-500" aria-hidden="true" />
                   <span className="text-gray-700">{item}</span>
                 </li>
               ))}
@@ -145,7 +145,7 @@ export function FocacciaLigurePage() {
       </section>
 
       {/* Target Section */}
-      <section className="py-16 lg:py-24 bg-amber-900 text-white">
+      <section className="py-16 lg:py-24 bg-terracotta-600 text-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold">
@@ -156,10 +156,10 @@ export function FocacciaLigurePage() {
             {t.focacciaLigure.targetList.map((item, index) => (
               <div
                 key={index}
-                className="bg-amber-800/50 rounded-lg p-4 flex items-center gap-3"
+                className="bg-terracotta-500/50 rounded-lg p-4 flex items-center gap-3"
               >
-                <Check className="h-5 w-5 text-amber-300 flex-shrink-0" aria-hidden="true" />
-                <span className="text-amber-100">{item}</span>
+                <Check className="h-5 w-5 text-terracotta-300 flex-shrink-0" aria-hidden="true" />
+                <span className="text-terracotta-100">{item}</span>
               </div>
             ))}
           </div>

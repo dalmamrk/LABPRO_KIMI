@@ -5,6 +5,23 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // Custom B2B Terracotta palette
+        terracotta: {
+          50: '#fef7f0',
+          100: '#fdeee0',
+          200: '#f9d4b8',
+          300: '#f4b58a',
+          400: '#cd853f', // hover/accent
+          500: '#a0522d', // primary
+          600: '#8b4513', // dark/CTA
+          700: '#6b3410',
+          800: '#4a2409',
+          900: '#2d1605',
+        },
+        cream: {
+          50: '#fefce8',
+          100: '#fef9c3',
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

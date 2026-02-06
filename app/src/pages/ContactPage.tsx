@@ -58,13 +58,13 @@ export function ContactPage() {
       <BreadcrumbJsonLd items={breadcrumbs} />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-amber-800 to-amber-900 text-white py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-terracotta-500 to-terracotta-600 text-white py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
               {t.contact.title}
             </h1>
-            <p className="text-xl text-amber-200">
+            <p className="text-xl text-terracotta-200">
               {language === 'it'
                 ? 'Siamo qui per rispondere alle tue domande'
                 : 'We are here to answer your questions'}
@@ -84,9 +84,9 @@ export function ContactPage() {
                   className={`flex items-start gap-4 ${item.isHeader ? 'pb-4 border-b border-stone-200' : ''
                     }`}
                 >
-                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${item.isHeader ? 'bg-amber-800' : 'bg-amber-100'
+                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${item.isHeader ? 'bg-terracotta-500' : 'bg-terracotta-100'
                     }`}>
-                    <item.icon className={`h-5 w-5 ${item.isHeader ? 'text-white' : 'text-amber-800'
+                    <item.icon className={`h-5 w-5 ${item.isHeader ? 'text-white' : 'text-terracotta-500'
                       }`} aria-hidden="true" />
                   </div>
                   <div>
@@ -98,7 +98,7 @@ export function ContactPage() {
                       item.isEmail ? (
                         <a
                           href={`mailto:${item.value}`}
-                          className="text-gray-900 font-medium hover:text-amber-800 transition-colors"
+                          className="text-gray-900 font-medium hover:text-terracotta-500 transition-colors"
                         >
                           {item.value}
                         </a>
@@ -143,7 +143,7 @@ export function ContactPage() {
               href="https://www.google.com/maps/dir//Via+Jonio,+5,+10138+Torino+TO"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-lg transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-terracotta-500 hover:bg-terracotta-600 text-white font-medium rounded-lg transition-colors"
             >
               <MapPin className="h-5 w-5" aria-hidden="true" />
               {language === 'it' ? 'Ottieni indicazioni' : 'Get directions'}
@@ -153,19 +153,19 @@ export function ContactPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-amber-900 text-white">
+      <section className="py-16 lg:py-24 bg-terracotta-600 text-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">
             {language === 'it' ? 'Hai domande?' : 'Have questions?'}
           </h2>
-          <p className="text-lg text-amber-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-terracotta-100 mb-8 max-w-2xl mx-auto">
             {language === 'it'
               ? 'Per informazioni commerciali e collaborazioni, scrivici a'
               : 'For commercial information and collaborations, write to'}
           </p>
           <a
             href={`mailto:${t.contact.commercialValue}`}
-            className="inline-flex items-center px-6 py-3 bg-white text-amber-900 font-semibold rounded-lg hover:bg-amber-50 transition-colors"
+            className="inline-flex items-center px-6 py-3 bg-white text-terracotta-600 font-semibold rounded-lg hover:bg-terracotta-50 transition-colors"
           >
             <Mail className="mr-2 h-5 w-5" aria-hidden="true" />
             {t.contact.commercialValue}

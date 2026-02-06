@@ -37,7 +37,7 @@ export function CookieBanner() {
                     <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
                         {/* Icon */}
                         <div className="flex-shrink-0">
-                            <div className="w-12 h-12 bg-amber-600 rounded-lg flex items-center justify-center">
+                            <div className="w-12 h-12 bg-terracotta-500 rounded-lg flex items-center justify-center">
                                 <Cookie className="h-6 w-6 text-white" aria-hidden="true" />
                             </div>
                         </div>
@@ -48,7 +48,7 @@ export function CookieBanner() {
                                 {t.cookies.message}{' '}
                                 <a
                                     href={`#/${language}/privacy`}
-                                    className="text-amber-300 hover:text-amber-200 underline font-medium transition-colors"
+                                    className="text-terracotta-300 hover:text-terracotta-200 underline font-medium transition-colors"
                                 >
                                     {t.cookies.privacyLink}
                                 </a>
@@ -67,7 +67,7 @@ export function CookieBanner() {
                             </button>
                             <button
                                 onClick={handleAccept}
-                                className="flex-1 sm:flex-none px-6 py-2 text-sm font-semibold bg-gradient-to-r from-amber-600 to-amber-700 text-white rounded-lg hover:shadow-lg hover:from-amber-500 hover:to-amber-600 transition-all"
+                                className="flex-1 sm:flex-none px-6 py-2 text-sm font-semibold bg-gradient-to-r from-terracotta-500 to-terracotta-600 text-white rounded-lg hover:shadow-lg hover:from-terracotta-500 hover:to-terracotta-500 transition-all"
                                 aria-label={t.cookies.accept}
                             >
                                 {t.cookies.accept}

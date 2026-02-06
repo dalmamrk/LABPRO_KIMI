@@ -45,7 +45,7 @@ export function OtherProductsPage() {
       <BreadcrumbJsonLd items={breadcrumbs} />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-amber-800 to-amber-900 text-white py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-terracotta-500 to-terracotta-600 text-white py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl text-center mx-auto">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
@@ -58,8 +58,8 @@ export function OtherProductsPage() {
       {/* Coming Soon Section */}
       <section className="py-16 lg:py-24 bg-stone-50">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-          <div className="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-8">
-            <Clock className="h-10 w-10 text-amber-800" aria-hidden="true" />
+          <div className="w-20 h-20 bg-terracotta-100 rounded-full flex items-center justify-center mx-auto mb-8">
+            <Clock className="h-10 w-10 text-terracotta-500" aria-hidden="true" />
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
             {language === 'it' ? 'Prossimamente' : 'Coming Soon'}
@@ -100,8 +100,8 @@ export function OtherProductsPage() {
                   </div>
                 ) : (
                   <div className="pt-8">
-                    <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto">
-                      <product.icon className="h-8 w-8 text-amber-800" aria-hidden="true" />
+                    <div className="w-16 h-16 bg-terracotta-100 rounded-full flex items-center justify-center mx-auto">
+                      <product.icon className="h-8 w-8 text-terracotta-500" aria-hidden="true" />
                     </div>
                   </div>
                 )}
@@ -122,19 +122,19 @@ export function OtherProductsPage() {
       </section>
 
       {/* Newsletter/Contact CTA */}
-      <section className="py-16 lg:py-24 bg-amber-900 text-white">
+      <section className="py-16 lg:py-24 bg-terracotta-600 text-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">
             {language === 'it' ? 'Resta aggiornato' : 'Stay updated'}
           </h2>
-          <p className="text-lg text-amber-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-terracotta-100 mb-8 max-w-2xl mx-auto">
             {language === 'it'
               ? 'Vuoi essere il primo a sapere quando i nostri nuovi prodotti saranno disponibili? Contattaci!'
               : 'Want to be the first to know when our new products are available? Contact us!'}
           </p>
           <a
             href={`/${language}/contatti`}
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-amber-600 to-amber-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg hover:from-amber-700 hover:to-amber-800 transition-all duration-300"
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-terracotta-500 to-terracotta-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg hover:from-terracotta-600 hover:to-terracotta-500 transition-all duration-300"
           >
             {language === 'it' ? 'Contattaci' : 'Contact us'}
           </a>

@@ -30,7 +30,7 @@ export function SourdoughPage() {
       <BreadcrumbJsonLd items={breadcrumbs} />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-amber-800 to-amber-900 text-white py-16 lg:py-24 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-terracotta-500 to-terracotta-600 text-white py-16 lg:py-24 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
@@ -38,7 +38,7 @@ export function SourdoughPage() {
             alt="Sourdough Starter"
             className="w-full h-full object-cover opacity-20 mix-blend-overlay"
           />
-          <div className="absolute inset-0 bg-amber-900/60 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-terracotta-600/60 mix-blend-multiply" />
         </div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -90,8 +90,8 @@ export function SourdoughPage() {
                   key={index}
                   className="bg-white rounded-xl p-6 shadow-sm border border-stone-100 hover:shadow-md transition-shadow text-center md:text-left"
                 >
-                  <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4 mx-auto md:mx-0">
-                    <Icon className="h-6 w-6 text-amber-800" aria-hidden="true" />
+                  <div className="w-12 h-12 bg-terracotta-100 rounded-lg flex items-center justify-center mb-4 mx-auto md:mx-0">
+                    <Icon className="h-6 w-6 text-terracotta-500" aria-hidden="true" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">
                     {benefit.title}
@@ -107,12 +107,12 @@ export function SourdoughPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-amber-900 text-white">
+      <section className="py-16 lg:py-24 bg-terracotta-600 text-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">
             {language === 'it' ? 'Scopri i nostri prodotti' : 'Discover our products'}
           </h2>
-          <p className="text-lg text-amber-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-terracotta-100 mb-8 max-w-2xl mx-auto">
             {language === 'it'
               ? 'Tutti i nostri prodotti sono realizzati con lievito madre per garantire qualità e autenticità'
               : 'All our products are made with sourdough starter to ensure quality and authenticity'}
@@ -120,13 +120,13 @@ export function SourdoughPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href={`/${language}/pane-naturale`}
-              className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-amber-600 to-amber-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg hover:from-amber-700 hover:to-amber-800 transition-all duration-300"
+              className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-terracotta-500 to-terracotta-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg hover:from-terracotta-600 hover:to-terracotta-500 transition-all duration-300"
             >
               {t.nav.bread}
             </a>
             <a
               href={`/${language}/focaccia-romana`}
-              className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-amber-600 to-amber-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg hover:from-amber-700 hover:to-amber-800 transition-all duration-300"
+              className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-terracotta-500 to-terracotta-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg hover:from-terracotta-600 hover:to-terracotta-500 transition-all duration-300"
             >
               {t.nav.focacciaRomana}
             </a>

@@ -21,7 +21,7 @@ export function AboutPage() {
       <BreadcrumbJsonLd items={breadcrumbs} />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-amber-800 to-amber-900 text-white py-16 lg:py-24 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-terracotta-500 to-terracotta-600 text-white py-16 lg:py-24 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
@@ -29,7 +29,7 @@ export function AboutPage() {
             alt="Artisan process"
             className="w-full h-full object-cover opacity-20 mix-blend-overlay"
           />
-          <div className="absolute inset-0 bg-amber-900/60 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-terracotta-600/60 mix-blend-multiply" />
         </div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -37,7 +37,7 @@ export function AboutPage() {
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
               {t.about.title}
             </h1>
-            <p className="text-xl text-amber-100 leading-relaxed">
+            <p className="text-xl text-terracotta-100 leading-relaxed">
               {t.about.traditionTitle}
             </p>
           </div>
@@ -57,9 +57,9 @@ export function AboutPage() {
                 <p>{t.about.traditionText2}</p>
               </div>
             </div>
-            <div className="bg-amber-50 rounded-xl p-8 text-center lg:text-left">
-              <div className="w-16 h-16 bg-amber-100 rounded-lg flex items-center justify-center mb-6 mx-auto lg:mx-0">
-                <Target className="h-8 w-8 text-amber-800" aria-hidden="true" />
+            <div className="bg-terracotta-50 rounded-xl p-8 text-center lg:text-left">
+              <div className="w-16 h-16 bg-terracotta-100 rounded-lg flex items-center justify-center mb-6 mx-auto lg:mx-0">
+                <Target className="h-8 w-8 text-terracotta-500" aria-hidden="true" />
               </div>
               <blockquote className="text-lg text-gray-800 italic">
                 "{language === 'it'
@@ -90,14 +90,14 @@ export function AboutPage() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div className="order-2 lg:order-1 bg-amber-50 rounded-xl p-8 text-center lg:text-left">
-              <div className="w-16 h-16 bg-amber-100 rounded-lg flex items-center justify-center mb-6 mx-auto lg:mx-0">
-                <Lightbulb className="h-8 w-8 text-amber-800" aria-hidden="true" />
+            <div className="order-2 lg:order-1 bg-terracotta-50 rounded-xl p-8 text-center lg:text-left">
+              <div className="w-16 h-16 bg-terracotta-100 rounded-lg flex items-center justify-center mb-6 mx-auto lg:mx-0">
+                <Lightbulb className="h-8 w-8 text-terracotta-500" aria-hidden="true" />
               </div>
               <ul className="space-y-4">
                 {t.about.innovationList.map((item, index) => (
                   <li key={index} className="flex items-start gap-3 justify-center lg:justify-start">
-                    <Check className="h-5 w-5 text-amber-600 mt-0.5 flex-shrink-0" aria-hidden="true" />
+                    <Check className="h-5 w-5 text-terracotta-500 mt-0.5 flex-shrink-0" aria-hidden="true" />
                     <span className="text-gray-700 text-left">{item}</span>
                   </li>
                 ))}
@@ -132,8 +132,8 @@ export function AboutPage() {
                 key={index}
                 className="bg-white rounded-lg p-6 shadow-sm border border-stone-100 flex flex-col sm:flex-row items-center sm:items-center gap-4 text-center sm:text-left"
               >
-                <div className="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Users className="h-5 w-5 text-amber-800" aria-hidden="true" />
+                <div className="w-10 h-10 bg-terracotta-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Users className="h-5 w-5 text-terracotta-500" aria-hidden="true" />
                 </div>
                 <span className="font-medium text-gray-800">{item}</span>
               </div>
@@ -166,12 +166,12 @@ export function AboutPage() {
       </section>
 
       {/* Future Section */}
-      <section className="py-16 lg:py-24 bg-amber-900 text-white">
+      <section className="py-16 lg:py-24 bg-terracotta-600 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6">
             {t.about.futureTitle}
           </h2>
-          <p className="text-lg text-amber-100 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg text-terracotta-100 leading-relaxed max-w-3xl mx-auto">
             {t.about.futureText}
           </p>
         </div>

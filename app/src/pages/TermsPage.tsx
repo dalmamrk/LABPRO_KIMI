@@ -12,16 +12,16 @@ export function TermsPage() {
             <SEO title={t.footer.terms} />
 
             {/* Hero Section */}
-            <section className="bg-gradient-to-br from-amber-800 to-amber-900 text-white py-16 lg:py-24">
+            <section className="bg-gradient-to-br from-terracotta-500 to-terracotta-600 text-white py-16 lg:py-24">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="max-w-3xl">
-                        <div className="w-16 h-16 bg-amber-100 rounded-lg flex items-center justify-center mb-6">
-                            <FileText className="h-8 w-8 text-amber-800" aria-hidden="true" />
+                        <div className="w-16 h-16 bg-terracotta-100 rounded-lg flex items-center justify-center mb-6">
+                            <FileText className="h-8 w-8 text-terracotta-500" aria-hidden="true" />
                         </div>
                         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
                             {t.footer.terms}
                         </h1>
-                        <p className="text-lg text-amber-100">
+                        <p className="text-lg text-terracotta-100">
                             {lastUpdated}
                         </p>
                     </div>
@@ -47,7 +47,7 @@ export function TermsPage() {
                         {/* Company Information */}
                         <div className="mb-12">
                             <div className="flex items-start gap-3 mb-4">
-                                <Scale className="h-6 w-6 text-amber-600 mt-1 flex-shrink-0" aria-hidden="true" />
+                                <Scale className="h-6 w-6 text-terracotta-500 mt-1 flex-shrink-0" aria-hidden="true" />
                                 <h2 className="text-2xl font-bold text-gray-900">
                                     {language === 'it' ? 'Informazioni sulla Società' : 'Company Information'}
                                 </h2>
@@ -61,10 +61,10 @@ export function TermsPage() {
                                     {language === 'it' ? 'Partita IVA:' : 'VAT Number:'} 13007570016
                                 </p>
                                 <p className="text-gray-700">
-                                    Email: <a href="mailto:info@lab-pro.it" className="text-amber-700 hover:text-amber-800">info@lab-pro.it</a>
+                                    Email: <a href="mailto:info@lab-pro.it" className="text-terracotta-600 hover:text-terracotta-500">info@lab-pro.it</a>
                                 </p>
                                 <p className="text-gray-700">
-                                    PEC: <a href="mailto:labpro@pec.it" className="text-amber-700 hover:text-amber-800">labpro@pec.it</a>
+                                    PEC: <a href="mailto:labpro@pec.it" className="text-terracotta-600 hover:text-terracotta-500">labpro@pec.it</a>
                                 </p>
                             </div>
                         </div>
@@ -84,7 +84,7 @@ export function TermsPage() {
                             </p>
                             <ul className="space-y-2">
                                 <li className="flex items-start gap-2">
-                                    <span className="text-amber-600 mt-1">•</span>
+                                    <span className="text-terracotta-500 mt-1">•</span>
                                     <span className="text-gray-700">
                                         {language === 'it'
                                             ? 'Utilizzare il Sito per scopi illegali o non autorizzati'
@@ -92,7 +92,7 @@ export function TermsPage() {
                                     </span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-amber-600 mt-1">•</span>
+                                    <span className="text-terracotta-500 mt-1">•</span>
                                     <span className="text-gray-700">
                                         {language === 'it'
                                             ? 'Tentare di accedere a aree riservate o non autorizzate del Sito'
@@ -100,7 +100,7 @@ export function TermsPage() {
                                     </span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-amber-600 mt-1">•</span>
+                                    <span className="text-terracotta-500 mt-1">•</span>
                                     <span className="text-gray-700">
                                         {language === 'it'
                                             ? 'Interferire con il corretto funzionamento del Sito'
@@ -108,7 +108,7 @@ export function TermsPage() {
                                     </span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-amber-600 mt-1">•</span>
+                                    <span className="text-terracotta-500 mt-1">•</span>
                                     <span className="text-gray-700">
                                         {language === 'it'
                                             ? 'Raccogliere o archiviare dati personali di altri utenti'
@@ -150,12 +150,12 @@ export function TermsPage() {
                         {/* Limitation of Liability */}
                         <div className="mb-12">
                             <div className="flex items-start gap-3 mb-4">
-                                <AlertCircle className="h-6 w-6 text-amber-600 mt-1 flex-shrink-0" aria-hidden="true" />
+                                <AlertCircle className="h-6 w-6 text-terracotta-500 mt-1 flex-shrink-0" aria-hidden="true" />
                                 <h2 className="text-2xl font-bold text-gray-900">
                                     {language === 'it' ? 'Limitazione di Responsabilità' : 'Limitation of Liability'}
                                 </h2>
                             </div>
-                            <div className="bg-amber-50 border-l-4 border-amber-600 p-6 rounded">
+                            <div className="bg-terracotta-50 border-l-4 border-terracotta-500 p-6 rounded">
                                 <p className="text-gray-700 leading-relaxed mb-4">
                                     {language === 'it'
                                         ? 'LAB PRO si impegna a mantenere il Sito aggiornato e funzionante, tuttavia non garantisce che il Sito sia sempre disponibile, privo di errori o virus.'
@@ -190,7 +190,7 @@ export function TermsPage() {
                                 {language === 'it' ? (
                                     <>
                                         Il trattamento dei dati personali è disciplinato dalla nostra{' '}
-                                        <a href={`#/${language}/privacy`} className="text-amber-700 hover:text-amber-800 font-medium underline">
+                                        <a href={`#/${language}/privacy`} className="text-terracotta-600 hover:text-terracotta-500 font-medium underline">
                                             Privacy Policy
                                         </a>
                                         , che costituisce parte integrante dei presenti Termini e Condizioni.
@@ -198,7 +198,7 @@ export function TermsPage() {
                                 ) : (
                                     <>
                                         The processing of personal data is governed by our{' '}
-                                        <a href={`#/${language}/privacy`} className="text-amber-700 hover:text-amber-800 font-medium underline">
+                                        <a href={`#/${language}/privacy`} className="text-terracotta-600 hover:text-terracotta-500 font-medium underline">
                                             Privacy Policy
                                         </a>
                                         , which forms an integral part of these Terms and Conditions.
@@ -234,7 +234,7 @@ export function TermsPage() {
                         {/* Contact */}
                         <div className="mb-12">
                             <div className="flex items-start gap-3 mb-4">
-                                <Mail className="h-6 w-6 text-amber-600 mt-1 flex-shrink-0" aria-hidden="true" />
+                                <Mail className="h-6 w-6 text-terracotta-500 mt-1 flex-shrink-0" aria-hidden="true" />
                                 <h2 className="text-2xl font-bold text-gray-900">
                                     {language === 'it' ? 'Contatti' : 'Contact'}
                                 </h2>
@@ -244,12 +244,12 @@ export function TermsPage() {
                                     ? 'Per qualsiasi domanda o chiarimento riguardo ai presenti Termini e Condizioni, è possibile contattarci:'
                                     : 'For any questions or clarifications regarding these Terms and Conditions, you can contact us:'}
                             </p>
-                            <div className="bg-amber-50 rounded-lg p-6">
+                            <div className="bg-terracotta-50 rounded-lg p-6">
                                 <p className="text-gray-700">
-                                    Email: <a href="mailto:info@lab-pro.it" className="text-amber-700 hover:text-amber-800 font-medium">info@lab-pro.it</a>
+                                    Email: <a href="mailto:info@lab-pro.it" className="text-terracotta-600 hover:text-terracotta-500 font-medium">info@lab-pro.it</a>
                                 </p>
                                 <p className="text-gray-700">
-                                    PEC: <a href="mailto:labpro@pec.it" className="text-amber-700 hover:text-amber-800 font-medium">labpro@pec.it</a>
+                                    PEC: <a href="mailto:labpro@pec.it" className="text-terracotta-600 hover:text-terracotta-500 font-medium">labpro@pec.it</a>
                                 </p>
                                 <p className="text-gray-700 mt-2">
                                     {language === 'it' ? 'Indirizzo:' : 'Address:'} Via Jonio 5, 10138 – Torino

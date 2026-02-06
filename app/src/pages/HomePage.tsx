@@ -102,8 +102,8 @@ export function HomePage() {
                 key={index}
                 className="bg-white rounded-xl p-6 shadow-sm border border-stone-100 hover:shadow-md transition-shadow text-center sm:text-left"
               >
-                <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4 mx-auto sm:mx-0">
-                  <feature.icon className="h-6 w-6 text-amber-800" aria-hidden="true" />
+                <div className="w-12 h-12 bg-terracotta-100 rounded-lg flex items-center justify-center mb-4 mx-auto sm:mx-0">
+                  <feature.icon className="h-6 w-6 text-terracotta-500" aria-hidden="true" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {feature.title}
@@ -141,7 +141,7 @@ export function HomePage() {
                 to={getLink(product.link)}
                 className="group block bg-stone-50 rounded-xl overflow-hidden border border-stone-100 transition-all"
               >
-                <div className="aspect-[4/3] bg-amber-100 relative overflow-hidden">
+                <div className="aspect-[4/3] bg-terracotta-100 relative overflow-hidden">
                   <img
                     src={product.image}
                     alt={product.title}
@@ -150,13 +150,13 @@ export function HomePage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" aria-hidden="true" />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-amber-800 transition-colors">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-terracotta-500 transition-colors">
                     {product.title}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">
                     {product.description}
                   </p>
-                  <span className="inline-flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-amber-600 to-amber-700 text-white font-semibold text-sm rounded-lg shadow-md hover:shadow-lg hover:from-amber-700 hover:to-amber-800 transition-all duration-300 group/btn">
+                  <span className="inline-flex items-center gap-2 px-4 py-2.5 bg-terracotta-500 text-white font-medium text-sm rounded-full hover:bg-terracotta-600 transition-colors">
                     {language === 'it' ? 'Scopri di più' : 'Learn more'}
                     <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" aria-hidden="true" />
                   </span>
@@ -168,7 +168,7 @@ export function HomePage() {
       </section>
 
       {/* About Teaser Section */}
-      <section className="py-16 lg:py-24 bg-amber-900 text-white" aria-labelledby="about-teaser-title">
+      <section className="py-16 lg:py-24 bg-terracotta-600 text-white" aria-labelledby="about-teaser-title">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -178,30 +178,30 @@ export function HomePage() {
               >
                 {t.about.traditionTitle}
               </h2>
-              <p className="text-lg text-amber-100 leading-relaxed mb-6">
+              <p className="text-lg text-terracotta-100 leading-relaxed mb-6">
                 {t.about.traditionText1}
               </p>
-              <p className="text-lg text-amber-100 leading-relaxed mb-8">
+              <p className="text-lg text-terracotta-100 leading-relaxed mb-8">
                 {t.about.traditionText2}
               </p>
-              <Link to={getLink('/chi-siamo')} className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-600 to-amber-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg hover:from-amber-700 hover:to-amber-800 transition-all duration-300 group/btn">
+              <Link to={getLink('/chi-siamo')} className="inline-flex items-center gap-2 px-6 py-3 bg-white/20 text-white font-medium rounded-full border border-white/50 hover:bg-white/30 transition-colors group/btn">
                 {language === 'it' ? 'Scopri la nostra storia' : 'Discover our story'}
                 <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover/btn:translate-x-1" aria-hidden="true" />
               </Link>
             </div>
             <div className="relative">
-              <div className="aspect-[4/3] bg-amber-800 rounded-xl overflow-hidden">
+              <div className="aspect-[4/3] bg-terracotta-500 rounded-xl overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <Wheat className="h-32 w-32 text-amber-700" aria-hidden="true" />
+                  <Wheat className="h-32 w-32 text-terracotta-600" aria-hidden="true" />
                 </div>
               </div>
               {/* Decorative elements */}
               <div
-                className="absolute -bottom-4 -right-4 w-24 h-24 bg-amber-700 rounded-lg -z-10"
+                className="absolute -bottom-4 -right-4 w-24 h-24 bg-terracotta-600 rounded-lg -z-10"
                 aria-hidden="true"
               />
               <div
-                className="absolute -top-4 -left-4 w-16 h-16 bg-amber-600 rounded-lg -z-10"
+                className="absolute -top-4 -left-4 w-16 h-16 bg-terracotta-500 rounded-lg -z-10"
                 aria-hidden="true"
               />
             </div>
@@ -223,7 +223,7 @@ export function HomePage() {
               ? 'Siamo sempre alla ricerca di persone motivate che condividano i nostri valori'
               : 'We are always looking for motivated people who share our values'}
           </p>
-          <Link to={getLink('/lavora-con-noi')} className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-600 to-amber-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg hover:from-amber-700 hover:to-amber-800 transition-all duration-300 group/btn">
+          <Link to={getLink('/lavora-con-noi')} className="inline-flex items-center gap-2 px-6 py-3 bg-terracotta-500 text-white font-medium rounded-full hover:bg-terracotta-600 transition-colors group/btn">
             {language === 'it' ? 'Scopri le opportunità' : 'Discover opportunities'}
             <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover/btn:translate-x-1" aria-hidden="true" />
           </Link>

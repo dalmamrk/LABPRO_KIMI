@@ -143,7 +143,7 @@ export function ContactPage() {
           </div>
           <div className="bg-white rounded-xl overflow-hidden shadow-lg">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2817.6892158849855!2d7.730861476586914!3d45.10236487107201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47886d8f5e5e5e5f%3A0x5e5e5e5e5e5e5e5e!2sVia%20Jonio%2C%205%2C%2010138%20Torino%20TO!5e0!3m2!1sit!2sit!4v1644000000000!5m2!1sit!2sit"
+              src="https://www.google.com/maps/d/embed?mid=1UXwIoi89nMb1awlPHMuNUGBhcFFPz1U"
               width="100%"
               height="450"
               style={{ border: 0 }}

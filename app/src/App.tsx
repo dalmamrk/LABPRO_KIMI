@@ -5,6 +5,7 @@ import { ScrollToTop } from '@/components/ui/ScrollToTop';
 import {
   HomePage,
   AboutPage,
+  ProductsPage,
   BreadPage,
   FocacciaRomanaPage,
   FocacciaLigurePage,
@@ -22,6 +23,7 @@ import type { Language } from '@/i18n/translations';
 const routeConfig = [
   { path: '/', element: HomePage },
   { path: '/chi-siamo', element: AboutPage },
+  { path: '/prodotti', element: ProductsPage },
   { path: '/pane-naturale', element: BreadPage },
   { path: '/focaccia-romana', element: FocacciaRomanaPage },
   { path: '/focaccia-ligure', element: FocacciaLigurePage },

@@ -1,5 +1,6 @@
 export { HomePage } from './HomePage';
 export { AboutPage } from './AboutPage';
+export { ProductsPage } from './ProductsPage';
 export { BreadPage } from './BreadPage';
 export { FocacciaRomanaPage } from './FocacciaRomanaPage';
 export { FocacciaLigurePage } from './FocacciaLigurePage';

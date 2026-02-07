@@ -1,10 +1,14 @@
+import { useState } from 'react';
 import { useI18n } from '@/i18n/I18nContext';
 import { SEO } from '@/components/seo/SEO';
 import { BreadcrumbJsonLd } from '@/components/seo/JsonLd';
-import { Mail, MapPin, Phone, Clock, Building, FileText, Briefcase } from 'lucide-react';
+import { Mail, MapPin, Phone, Clock, FileText, Briefcase, ChevronDown, Building } from 'lucide-react';
+
+
 
 export function ContactPage() {
   const { t, language } = useI18n();
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const breadcrumbs = [
     { name: t.nav.home, url: `/${language}/` },
@@ -17,6 +21,7 @@ export function ContactPage() {
       label: t.contact.companyName,
       value: '',
       isHeader: true,
+      useLogo: false,
     },
     {
       icon: FileText,
@@ -52,6 +57,10 @@ export function ContactPage() {
     },
   ];
 
+  const toggleFaq = (index: number) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
+
   return (
     <>
       <SEO title={t.nav.contact} />
@@ -77,20 +86,20 @@ export function ContactPage() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="bg-stone-50 rounded-xl p-8 lg:p-12">
-            <div className="space-y-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {contactInfo.map((item, index) => (
                 <div
                   key={index}
-                  className={`flex items-start gap-4 ${item.isHeader ? 'pb-4 border-b border-stone-200' : ''
+                  className={`flex items-start gap-4 ${item.isHeader ? 'lg:col-span-2 pb-4 border-b border-stone-200' : ''
                     }`}
                 >
-                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${item.isHeader ? 'bg-terracotta-500' : 'bg-terracotta-100'
+                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 ${item.isHeader ? 'bg-terracotta-500' : 'bg-terracotta-100'
                     }`}>
-                    <item.icon className={`h-5 w-5 ${item.isHeader ? 'text-white' : 'text-terracotta-500'
-                      }`} aria-hidden="true" />
+                    {item.icon && <item.icon className={`h-6 w-6 ${item.isHeader ? 'text-white' : 'text-terracotta-500'
+                      }`} aria-hidden="true" />}
                   </div>
                   <div>
-                    <span className={`block text-sm ${item.isHeader ? 'text-gray-500' : 'text-gray-500'
+                    <span className={`block ${item.isHeader ? 'text-2xl font-extrabold text-gray-900' : 'text-sm text-gray-500'
                       }`}>
                       {item.label}
                     </span>
@@ -156,12 +165,10 @@ export function ContactPage() {
       <section className="py-16 lg:py-24 bg-terracotta-600 text-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-            {language === 'it' ? 'Hai domande?' : 'Have questions?'}
+            {t.contact.ctaTitle}
           </h2>
           <p className="text-lg text-terracotta-100 mb-8 max-w-2xl mx-auto">
-            {language === 'it'
-              ? 'Per informazioni commerciali e collaborazioni, scrivici a'
-              : 'For commercial information and collaborations, write to'}
+            {t.contact.ctaText}
           </p>
           <a
             href={`mailto:${t.contact.commercialValue}`}
@@ -170,6 +177,50 @@ export function ContactPage() {
             <Mail className="mr-2 h-5 w-5" aria-hidden="true" />
             {t.contact.commercialValue}
           </a>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 lg:py-24 bg-stone-50">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+              {t.contact.faqTitle}
+            </h2>
+          </div>
+
+          <div className="space-y-2">
+            {t.contact.faqItems.map((faq, index) => (
+              <div
+                key={index}
+                className={`bg-white rounded-lg overflow-hidden shadow-md border border-stone-200 transition-all duration-200 hover:shadow-lg hover:border-terracotta-200 ${openFaq === index ? 'ring-1 ring-terracotta-300' : ''
+                  }`}
+              >
+                <button
+                  onClick={() => toggleFaq(index)}
+                  className="w-full px-5 py-4 flex items-center justify-between text-left hover:bg-stone-50 transition-colors"
+                  aria-expanded={openFaq === index}
+                >
+                  <span className="font-medium text-gray-800 text-sm pr-4">{faq.question}</span>
+                  <ChevronDown
+                    className={`h-4 w-4 text-terracotta-500 flex-shrink-0 transition-transform duration-300 ${openFaq === index ? 'rotate-180' : ''
+                      }`}
+                    aria-hidden="true"
+                  />
+                </button>
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${openFaq === index ? 'max-h-96' : 'max-h-0'
+                    }`}
+                >
+                  <div className="px-5 pb-4 text-gray-600 text-sm leading-relaxed border-t border-stone-100">
+                    <div className="pt-4">
+                      {faq.answer}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </>

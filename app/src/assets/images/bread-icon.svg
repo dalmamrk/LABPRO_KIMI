@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- Pane ovale -->
+  <ellipse cx="12" cy="12" rx="10" ry="7" fill="#E07B39" stroke="#8B4513" stroke-width="1.5"/>
+  <!-- Segni sulla crosta -->
+  <path d="M7 9.5L10 14.5" stroke="#8B4513" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M11 8.5L14 15.5" stroke="#8B4513" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M15 9.5L18 14.5" stroke="#8B4513" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

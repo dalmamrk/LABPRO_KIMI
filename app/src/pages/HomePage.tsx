@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
 import { useI18n } from '@/i18n/I18nContext';
 import { SEO } from '@/components/seo/SEO';
-import { ArrowRight, Wheat, Flame, Droplets, Circle } from 'lucide-react';
+import { Wheat, Flame, Droplets, Circle } from 'lucide-react';
+
+// Bread icon
+import breadIcon from '@/assets/images/bread-icon.svg';
 
 import { VideoHero } from '@/components/ui/VideoHero';
 
@@ -156,9 +159,9 @@ export function HomePage() {
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">
                     {product.description}
                   </p>
-                  <span className="inline-flex items-center gap-2 px-4 py-2.5 bg-terracotta-500 text-white font-medium text-sm rounded-full hover:bg-terracotta-600 transition-colors">
+                  <span className="inline-flex items-center gap-2 px-4 py-2.5 bg-terracotta-500 text-white font-medium text-sm rounded-full group-hover:bg-terracotta-600 transition-all duration-200">
                     {language === 'it' ? 'Scopri di più' : 'Learn more'}
-                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" aria-hidden="true" />
+                    <img src={breadIcon} alt="" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
                   </span>
                 </div>
               </Link>
@@ -184,9 +187,9 @@ export function HomePage() {
               <p className="text-lg text-terracotta-100 leading-relaxed mb-8">
                 {t.about.traditionText2}
               </p>
-              <Link to={getLink('/chi-siamo')} className="inline-flex items-center gap-2 px-6 py-3 bg-white/20 text-white font-medium rounded-full border border-white/50 hover:bg-white/30 transition-colors group/btn">
+              <Link to={getLink('/chi-siamo')} className="inline-flex items-center gap-2 px-6 py-3 bg-white/20 text-white font-medium rounded-full border border-white/50 hover:bg-white/30 transition-all duration-200 group">
                 {language === 'it' ? 'Scopri la nostra storia' : 'Discover our story'}
-                <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover/btn:translate-x-1" aria-hidden="true" />
+                <img src={breadIcon} alt="" className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
               </Link>
             </div>
             <div className="relative">
@@ -223,9 +226,9 @@ export function HomePage() {
               ? 'Siamo sempre alla ricerca di persone motivate che condividano i nostri valori'
               : 'We are always looking for motivated people who share our values'}
           </p>
-          <Link to={getLink('/lavora-con-noi')} className="inline-flex items-center gap-2 px-6 py-3 bg-terracotta-500 text-white font-medium rounded-full hover:bg-terracotta-600 transition-colors group/btn">
+          <Link to={getLink('/lavora-con-noi')} className="inline-flex items-center gap-2 px-6 py-3 bg-terracotta-500 text-white font-medium rounded-full hover:bg-terracotta-600 transition-all duration-200 group">
             {language === 'it' ? 'Scopri le opportunità' : 'Discover opportunities'}
-            <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover/btn:translate-x-1" aria-hidden="true" />
+            <img src={breadIcon} alt="" className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
           </Link>
         </div>
       </section>

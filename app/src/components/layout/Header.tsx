@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useI18n } from '@/i18n/I18nContext';
-import { Menu, X, Globe, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 // Logo
 import labProLogo from '@/assets/images/Logo_labpro.webp';
+import breadIcon from '@/assets/images/bread-icon.svg';
 import {
   Sheet,
   SheetContent,
@@ -56,8 +57,8 @@ export function Header() {
     { label: t.nav.about, path: '/chi-siamo' },
   ];
 
+  // Only Contact in secondary nav (Work With Us moved to right side)
   const secondaryNavItems = [
-    { label: t.nav.workWithUs, path: '/lavora-con-noi' },
     { label: t.nav.contact, path: '/contatti' },
   ];
 
@@ -80,6 +81,9 @@ export function Header() {
     const newPath = `/${newLang}${currentPath}`;
     navigate(newPath);
   };
+
+  // Check if Work With Us is the current page
+  const isWorkWithUsActive = currentPath === '/lavora-con-noi';
 
   return (
     <header
@@ -110,9 +114,9 @@ export function Header() {
               <Link
                 key={item.path}
                 to={getLink(item.path)}
-                className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${currentPath === item.path
-                  ? 'text-terracotta-500 bg-terracotta-50'
-                  : 'text-gray-700 hover:text-terracotta-500 hover:bg-terracotta-50'
+                className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 ${currentPath === item.path
+                  ? 'bg-terracotta-500 text-white shadow-sm'
+                  : 'text-gray-700 hover:bg-terracotta-500/50 hover:text-white'
                   }`}
               >
                 {item.label}
@@ -125,20 +129,23 @@ export function Header() {
               onMouseEnter={() => setIsProductsOpen(true)}
               onMouseLeave={() => setIsProductsOpen(false)}
             >
-              <button
-                className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${isProductPage
-                  ? 'text-terracotta-500 bg-terracotta-50'
-                  : 'text-gray-700 hover:text-terracotta-500 hover:bg-terracotta-50'
+              <Link
+                to={getLink('/prodotti')}
+                className={`flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 ${isProductPage || currentPath === '/prodotti'
+                  ? 'bg-terracotta-500 text-white shadow-sm'
+                  : 'text-gray-700 hover:bg-terracotta-500/50 hover:text-white'
                   }`}
                 aria-expanded={isProductsOpen}
                 aria-haspopup="true"
               >
                 {t.nav.products}
-                <ChevronDown
+                <img
+                  src={breadIcon}
+                  alt=""
                   className={`h-4 w-4 transition-transform duration-200 ${isProductsOpen ? 'rotate-180' : ''}`}
                   aria-hidden="true"
                 />
-              </button>
+              </Link>
 
               {/* Dropdown Menu */}
               <div
@@ -153,9 +160,9 @@ export function Header() {
                       <Link
                         key={item.path}
                         to={getLink(item.path)}
-                        className={`block px-4 py-2.5 text-sm transition-colors ${currentPath === item.path
-                          ? 'text-terracotta-500 bg-terracotta-50 font-medium'
-                          : 'text-gray-700 hover:text-terracotta-500 hover:bg-terracotta-50'
+                        className={`block px-4 py-2.5 text-sm transition-all duration-200 ${currentPath === item.path
+                          ? 'text-white bg-terracotta-500 font-medium'
+                          : 'text-gray-700 hover:bg-terracotta-500 hover:text-white'
                           }`}
                         onClick={() => setIsProductsOpen(false)}
                       >
@@ -167,14 +174,14 @@ export function Header() {
               </div>
             </div>
 
-            {/* Secondary nav items after Products */}
+            {/* Secondary nav items after Products (only Contact now) */}
             {secondaryNavItems.map((item) => (
               <Link
                 key={item.path}
                 to={getLink(item.path)}
-                className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${currentPath === item.path
-                  ? 'text-terracotta-500 bg-terracotta-50'
-                  : 'text-gray-700 hover:text-terracotta-500 hover:bg-terracotta-50'
+                className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 ${currentPath === item.path
+                  ? 'bg-terracotta-500 text-white shadow-sm'
+                  : 'text-gray-700 hover:bg-terracotta-500/50 hover:text-white'
                   }`}
               >
                 {item.label}
@@ -182,19 +189,42 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Right side: Language switch + Mobile menu */}
-          <div className="flex items-center gap-2">
-            {/* Language Switch - Desktop */}
-            <Button
-              variant="ghost"
-              size="sm"
+          {/* Right side: Work With Us + Language switch + Mobile menu */}
+          <div className="flex items-center gap-3">
+            {/* Work With Us - Desktop (moved to right side) */}
+            <Link
+              to={getLink('/lavora-con-noi')}
+              className={`hidden lg:inline-flex px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 ${isWorkWithUsActive
+                ? 'bg-terracotta-500 text-white shadow-sm'
+                : 'text-gray-700 hover:bg-terracotta-500/50 hover:text-white'
+                }`}
+            >
+              {t.nav.workWithUs}
+            </Link>
+
+            {/* Language Toggle Switch - Desktop */}
+            <button
               onClick={toggleLanguage}
-              className="hidden lg:flex items-center gap-2 text-gray-700 hover:text-terracotta-500 hover:bg-terracotta-50"
+              className="hidden lg:flex items-center h-8 bg-gray-100 rounded-full p-0.5 transition-colors hover:bg-gray-200"
               aria-label={`Switch to ${language === 'it' ? 'English' : 'Italian'}`}
             >
-              <Globe className="h-4 w-4" aria-hidden="true" />
-              <span className="uppercase font-medium">{language}</span>
-            </Button>
+              <span
+                className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all duration-200 ${language === 'it'
+                  ? 'bg-terracotta-500 text-white shadow-sm'
+                  : 'text-gray-600'
+                  }`}
+              >
+                IT
+              </span>
+              <span
+                className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all duration-200 ${language === 'en'
+                  ? 'bg-terracotta-500 text-white shadow-sm'
+                  : 'text-gray-600'
+                  }`}
+              >
+                EN
+              </span>
+            </button>
 
             {/* Mobile Menu */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -230,19 +260,33 @@ export function Header() {
                     </SheetClose>
                   </div>
 
-                  {/* Mobile Language Switch */}
-                  <div className="py-4 border-b">
-                    <Button
-                      variant="outline"
+                  {/* Mobile Language Switch - IT/EN Toggle */}
+                  <div className="py-4 border-b flex justify-center">
+                    <button
                       onClick={() => {
                         toggleLanguage();
                         setIsOpen(false);
                       }}
-                      className="w-full flex items-center justify-center gap-2 border-terracotta-200 text-terracotta-500 hover:bg-terracotta-50"
+                      className="flex items-center h-10 bg-gray-100 rounded-full p-1 transition-colors"
+                      aria-label={`Switch to ${language === 'it' ? 'English' : 'Italian'}`}
                     >
-                      <Globe className="h-4 w-4" aria-hidden="true" />
-                      <span>{language === 'it' ? 'Switch to English' : 'Passa all\'Italiano'}</span>
-                    </Button>
+                      <span
+                        className={`px-4 py-2 text-sm font-semibold rounded-full transition-all duration-200 ${language === 'it'
+                          ? 'bg-terracotta-500 text-white shadow-sm'
+                          : 'text-gray-600'
+                          }`}
+                      >
+                        IT
+                      </span>
+                      <span
+                        className={`px-4 py-2 text-sm font-semibold rounded-full transition-all duration-200 ${language === 'en'
+                          ? 'bg-terracotta-500 text-white shadow-sm'
+                          : 'text-gray-600'
+                          }`}
+                      >
+                        EN
+                      </span>
+                    </button>
                   </div>
 
                   {/* Mobile Navigation */}
@@ -253,9 +297,9 @@ export function Header() {
                           <SheetClose asChild>
                             <Link
                               to={getLink(item.path)}
-                              className={`block px-4 py-3 text-base font-medium rounded-md transition-colors ${currentPath === item.path
-                                ? 'text-terracotta-500 bg-terracotta-50'
-                                : 'text-gray-700 hover:text-terracotta-500 hover:bg-terracotta-50'
+                              className={`block px-4 py-3 text-base font-medium rounded-full mx-2 transition-all duration-200 ${currentPath === item.path
+                                ? 'bg-terracotta-500 text-white'
+                                : 'text-gray-700 hover:bg-terracotta-50 hover:text-terracotta-600'
                                 }`}
                             >
                               {item.label}

@@ -2,7 +2,10 @@ import { useI18n } from '@/i18n/I18nContext';
 import { SEO } from '@/components/seo/SEO';
 import { BreadcrumbJsonLd } from '@/components/seo/JsonLd';
 import { Button } from '@/components/ui/button';
-import { Users, Wrench, Globe, Mail, Check, ArrowRight } from 'lucide-react';
+import { Users, Wrench, Globe, Mail, Check } from 'lucide-react';
+
+// Bread icon
+import breadIcon from '@/assets/images/bread-icon.svg';
 
 export function WorkWithUsPage() {
   const { t, language } = useI18n();
@@ -131,12 +134,12 @@ export function WorkWithUsPage() {
           <Button
             asChild
             size="lg"
-            className="bg-white/20 text-white hover:bg-white/30 font-medium rounded-full border border-white/50 shadow-none transition-colors"
+            className="bg-white/20 text-white hover:bg-white/30 font-medium rounded-full border border-white/50 shadow-none transition-all duration-200 group"
           >
             <a href={`mailto:${t.workWithUs.applyEmail}`}>
               <Mail className="mr-2 h-5 w-5" aria-hidden="true" />
               {t.workWithUs.applyEmail}
-              <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
+              <img src={breadIcon} alt="" className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
             </a>
           </Button>
         </div>

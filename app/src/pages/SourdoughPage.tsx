@@ -5,6 +5,7 @@ import { Sparkles, Heart, Activity, Zap, Leaf, ChefHat, History } from 'lucide-r
 
 // Images
 import sourdoughStarter from '@/assets/images/sourdough-starter.webp';
+import breadIcon from '@/assets/images/bread-icon.svg';
 
 export function SourdoughPage() {
   const { t, language } = useI18n();
@@ -36,9 +37,9 @@ export function SourdoughPage() {
           <img
             src={sourdoughStarter}
             alt="Sourdough Starter"
-            className="w-full h-full object-cover opacity-20 mix-blend-overlay"
+            className="w-full h-full object-cover opacity-60"
           />
-          <div className="absolute inset-0 bg-terracotta-600/60 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-terracotta-600/20" />
         </div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -120,15 +121,17 @@ export function SourdoughPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href={`/${language}/pane-naturale`}
-              className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-terracotta-500 to-terracotta-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg hover:from-terracotta-600 hover:to-terracotta-500 transition-all duration-300"
+              className="inline-flex items-center justify-center px-6 py-3 bg-white text-terracotta-600 font-semibold rounded-full hover:bg-terracotta-50 transition-all duration-200 group"
             >
               {t.nav.bread}
+              <img src={breadIcon} alt="" className="h-5 w-5 ml-2 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
             </a>
             <a
               href={`/${language}/focaccia-romana`}
-              className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-terracotta-500 to-terracotta-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg hover:from-terracotta-600 hover:to-terracotta-500 transition-all duration-300"
+              className="inline-flex items-center justify-center px-6 py-3 bg-transparent text-white font-semibold rounded-full border border-white/80 hover:bg-white/10 transition-all duration-200 group"
             >
               {t.nav.focacciaRomana}
+              <img src={breadIcon} alt="" className="h-5 w-5 ml-2 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
             </a>
           </div>
         </div>

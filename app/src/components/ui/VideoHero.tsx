@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
 import { useI18n } from '@/i18n/I18nContext';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
+
+// Bread icon
+import breadIcon from '@/assets/images/bread-icon.svg';
 
 // Videos
 import headerVideoWebm from '@/assets/videos/headervideo.webm';
@@ -60,11 +63,11 @@ export function VideoHero() {
                         <Button
                             asChild
                             size="lg"
-                            className="bg-terracotta-500 text-white hover:bg-terracotta-600 font-medium text-base px-8 py-6 rounded-full border-0 shadow-none transition-colors"
+                            className="bg-terracotta-500 text-white hover:bg-terracotta-600 font-medium text-base px-8 py-6 rounded-full border-0 shadow-none transition-all duration-200 group"
                         >
-                            <Link to={getLink('/pane-naturale')}>
+                            <Link to={getLink('/prodotti')}>
                                 {t.home.ctaPrimary}
-                                <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
+                                <img src={breadIcon} alt="" className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
                             </Link>
                         </Button>
                         {/* Secondary CTA - Ghost with Border */}

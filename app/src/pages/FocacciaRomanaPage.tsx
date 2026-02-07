@@ -34,9 +34,9 @@ export function FocacciaRomanaPage() {
           <img
             src={focacciaRomanaDough}
             alt="Focaccia Romana Dough"
-            className="w-full h-full object-cover opacity-20 mix-blend-overlay"
+            className="w-full h-full object-cover opacity-60"
           />
-          <div className="absolute inset-0 bg-terracotta-600/60 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-terracotta-600/20" />
         </div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

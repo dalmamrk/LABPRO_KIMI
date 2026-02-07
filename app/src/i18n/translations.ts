@@ -165,6 +165,10 @@ export interface Translations {
     hoursValue: string;
     commercialLabel: string;
     commercialValue: string;
+    ctaTitle: string;
+    ctaText: string;
+    faqTitle: string;
+    faqItems: { question: string; answer: string; }[];
   };
   // Footer
   footer: {
@@ -198,7 +202,7 @@ export const translations: Record<Language, Translations> = {
       otherProducts: 'Altri Prodotti',
       sourdough: 'Lievito Madre',
       workWithUs: 'Lavora con Noi',
-      contact: 'Contatti',
+      contact: 'Contatti & Info',
     },
     home: {
       heroTitle: 'LAB PRO',
@@ -433,6 +437,51 @@ export const translations: Record<Language, Translations> = {
       hoursValue: 'Lunedì – Venerdì: 8:00 – 18:00',
       commercialLabel: 'Informazioni commerciali',
       commercialValue: 'info@lab-pro.it',
+      ctaTitle: 'Hai domande?',
+      ctaText: 'Consulta le nostre FAQ qui sotto oppure scrivici per informazioni commerciali e collaborazioni.',
+      faqTitle: 'Domande Frequenti',
+      faqItems: [
+        {
+          question: 'Quali prodotti realizzate?',
+          answer: 'Lab Pro produce pane naturale con lievito madre, focaccia romana in pala, focaccia ligure, Viennoiserie, biscotti e pasticceria secca. Tutti i nostri prodotti sono realizzati con ingredienti selezionati e lavorazioni artigianali.',
+        },
+        {
+          question: 'Cos\'è il lievito madre e perché lo usate?',
+          answer: 'Il lievito madre è una coltura naturale di lieviti e batteri lattici. Noi di Lab Pro lo utilizziamo al 30% negli impasti per garantire maggiore digeribilità, conservazione naturale prolungata e un profilo aromatico più ricco e complesso.',
+        },
+        {
+          question: 'Il vostro pane è adatto a chi ha difficoltà digestive?',
+          answer: 'Sì, la lunga fermentazione con lievito madre e altri componenti, rendono il pane di Lab Pro più gentile sullo stomaco. Inoltre ha un indice glicemico inferiore rispetto al pane tradizionale.',
+        },
+        {
+          question: 'Come si conserva il vostro pane?',
+          answer: 'Consigliamo di conservarlo in carta traspirante, in ambiente asciutto. Grazie all\'alta idratazione e al lievito madre, il pane di Lab Pro mantiene morbidezza e freschezza per diversi giorni.',
+        },
+        {
+          question: 'Qual è la differenza tra focaccia romana e ligure?',
+          answer: 'La focaccia romana in pala di Lab Pro è caratterizzata da una base croccante e una mollica alveolata e leggera, cotta su pietra. La focaccia ligure è più bassa e soffice, con la classica superficie dorata ricca di olio extravergine.',
+        },
+        {
+          question: 'Dove posso acquistare i vostri prodotti?',
+          answer: 'I nostri prodotti sono disponibili presso il laboratorio Lab Pro di Torino in Via Jonio n. 5 (dal lunedì al venerdì, dalle 8 alle 18) e attraverso distributori selezionati. Per informazioni commerciali contattaci a info@lab-pro.it.',
+        },
+        {
+          question: 'Effettuate consegne in tutta Italia?',
+          answer: 'Sì, collaboriamo con distributori sul territorio nazionale. Per forniture e collaborazioni commerciali, contattaci direttamente per valutare le soluzioni più adatte alle tue esigenze.',
+        },
+        {
+          question: 'Siete aperti a distributori esteri?',
+          answer: 'Assolutamente sì. Siamo attivamente alla ricerca di distributori per mercati esteri, in particolare Regno Unito, Polonia e Germania. Contattaci per discutere opportunità di collaborazione.',
+        },
+        {
+          question: 'Posso visitare il vostro laboratorio?',
+          answer: 'Certo! Siamo in Via Jonio 5 a Torino. Ti consigliamo di contattarci prima per fissare un appuntamento. Siamo aperti dal lunedì al venerdì, dalle 8:00 alle 18:00.',
+        },
+        {
+          question: 'State cercando personale?',
+          answer: 'Siamo sempre alla ricerca di persone motivate sia nell\'area produzione che commerciale. Visita la sezione "Lavora con Noi" o inviaci la tua candidatura a info@lab-pro.it.',
+        },
+      ],
     },
     footer: {
       rights: '© 2025 LAB PRO S.r.l. Tutti i diritti riservati.',
@@ -461,7 +510,7 @@ export const translations: Record<Language, Translations> = {
       otherProducts: 'Other Products',
       sourdough: 'Sourdough Starter',
       workWithUs: 'Work with Us',
-      contact: 'Contact',
+      contact: 'Contact & FAQ',
     },
     home: {
       heroTitle: 'LAB PRO',
@@ -696,6 +745,51 @@ export const translations: Record<Language, Translations> = {
       hoursValue: 'Monday – Friday: 8:00 – 18:00',
       commercialLabel: 'Commercial Information',
       commercialValue: 'info@lab-pro.it',
+      ctaTitle: 'Have questions?',
+      ctaText: 'Check our FAQ below or write to us for commercial information and collaborations.',
+      faqTitle: 'Frequently Asked Questions',
+      faqItems: [
+        {
+          question: 'What products do you make?',
+          answer: 'Lab Pro produces natural bread with sourdough starter, Roman focaccia in pala, Ligurian focaccia, Viennoiserie, biscuits and dry pastries. All our products are made with selected ingredients and artisan craftsmanship.',
+        },
+        {
+          question: 'What is sourdough starter and why do you use it?',
+          answer: 'Sourdough starter is a natural culture of yeasts and lactic acid bacteria. At Lab Pro, we use it at 30% in our doughs to ensure greater digestibility, prolonged natural preservation, and a richer, more complex aromatic profile.',
+        },
+        {
+          question: 'Is your bread suitable for those with digestive difficulties?',
+          answer: 'Yes, the long fermentation with sourdough starter and other components make Lab Pro bread gentler on the stomach. It also has a lower glycaemic index compared to traditional bread.',
+        },
+        {
+          question: 'How should I store your bread?',
+          answer: 'We recommend storing it in breathable paper, in a dry environment. Thanks to the high hydration and sourdough starter, Lab Pro bread maintains softness and freshness for several days.',
+        },
+        {
+          question: 'What is the difference between Roman and Ligurian focaccia?',
+          answer: 'Lab Pro\'s Roman focaccia in pala features a crispy base and a light, airy crumb, baked on stone. Ligurian focaccia is lower and softer, with the classic golden surface rich in extra virgin olive oil.',
+        },
+        {
+          question: 'Where can I buy your products?',
+          answer: 'Our products are available at the Lab Pro workshop in Turin at Via Jonio 5 (Monday to Friday, 8am to 6pm) and through selected distributors. For commercial information, contact us at info@lab-pro.it.',
+        },
+        {
+          question: 'Do you deliver throughout Italy?',
+          answer: 'Yes, we work with distributors across the national territory. For supplies and commercial collaborations, contact us directly to evaluate the solutions best suited to your needs.',
+        },
+        {
+          question: 'Are you open to foreign distributors?',
+          answer: 'Absolutely yes. We are actively looking for distributors for foreign markets, particularly the United Kingdom, Poland and Germany. Contact us to discuss collaboration opportunities.',
+        },
+        {
+          question: 'Can I visit your workshop?',
+          answer: 'Of course! We are located at Via Jonio 5 in Turin. We recommend contacting us beforehand to schedule an appointment. We are open Monday to Friday, from 8:00 to 18:00.',
+        },
+        {
+          question: 'Are you looking for staff?',
+          answer: 'We are always looking for motivated people in both production and commercial areas. Visit the "Work with Us" section or send your application to info@lab-pro.it.',
+        },
+      ],
     },
     footer: {
       rights: '© 2025 LAB PRO S.r.l. All rights reserved.',

@@ -2,7 +2,10 @@ import { useState } from 'react';
 import { useI18n } from '@/i18n/I18nContext';
 import { SEO } from '@/components/seo/SEO';
 import { BreadcrumbJsonLd } from '@/components/seo/JsonLd';
-import { Mail, MapPin, Phone, Clock, FileText, Briefcase, ChevronDown, Building } from 'lucide-react';
+import { Mail, MapPin, Phone, Clock, FileText, Briefcase, ChevronDown } from 'lucide-react';
+
+// Logo
+import labProLogo from '@/assets/images/Logo_labpro.webp';
 
 
 
@@ -16,13 +19,7 @@ export function ContactPage() {
   ];
 
   const contactInfo = [
-    {
-      icon: Building,
-      label: t.contact.companyName,
-      value: '',
-      isHeader: true,
-      useLogo: false,
-    },
+
     {
       icon: FileText,
       label: t.contact.vatLabel,
@@ -86,21 +83,31 @@ export function ContactPage() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="bg-stone-50 rounded-xl p-8 lg:p-12">
+
+            {/* Logo Centered */}
+            <div className="flex justify-center mb-10 border-b border-stone-200 pb-8">
+              <img src={labProLogo} alt="LAB PRO" className="h-24 w-auto object-contain" />
+            </div>
+
+            {/* Company Name */}
+            <div className="mb-6 text-left">
+              <h3 className="text-2xl font-extrabold text-gray-900">
+                {t.contact.companyName}
+              </h3>
+            </div>
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {contactInfo.map((item, index) => (
                 <div
                   key={index}
-                  className={`flex items-start gap-4 ${item.isHeader ? 'lg:col-span-2 pb-4 border-b border-stone-200' : ''
-                    }`}
+                  className="flex items-start gap-4"
                 >
-                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 ${item.isHeader ? 'bg-terracotta-500' : 'bg-terracotta-100'
-                    }`}>
-                    {item.icon && <item.icon className={`h-6 w-6 ${item.isHeader ? 'text-white' : 'text-terracotta-500'
-                      }`} aria-hidden="true" />}
+                  <div className="w-12 h-12 rounded-lg bg-terracotta-100 flex items-center justify-center flex-shrink-0">
+                    {item.icon && <item.icon className="h-6 w-6 text-terracotta-500" aria-hidden="true" />}
                   </div>
+
                   <div>
-                    <span className={`block ${item.isHeader ? 'text-2xl font-extrabold text-gray-900' : 'text-sm text-gray-500'
-                      }`}>
+                    <span className="block text-sm text-gray-500">
                       {item.label}
                     </span>
                     {item.value && (

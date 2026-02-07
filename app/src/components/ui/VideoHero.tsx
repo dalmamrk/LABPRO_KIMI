@@ -6,6 +6,9 @@ import { ChevronDown } from 'lucide-react';
 // Bread icon
 import breadIcon from '@/assets/images/bread-icon.svg';
 
+// Poster Image
+import homeHeroBaker from '@/assets/images/home-hero-baker.webp';
+
 // Videos
 import headerVideoWebm from '@/assets/videos/headervideo.webm';
 import headerVideoMp4 from '@/assets/videos/headervideo.mp4';
@@ -35,6 +38,7 @@ export function VideoHero() {
                 preload="auto"
                 className="absolute inset-0 h-full w-full object-cover"
                 aria-hidden="true"
+                poster={homeHeroBaker}
             >
                 <source src={headerVideoWebm} type="video/webm" />
                 <source src={headerVideoMp4} type="video/mp4" />

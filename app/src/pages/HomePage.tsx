@@ -82,40 +82,43 @@ export function HomePage() {
       {/* Video Hero Section */}
       <VideoHero />
 
-      {/* Features Section */}
-      <section id="features-section" className="py-16 lg:py-24 bg-stone-50" aria-labelledby="features-title">
+      <section id="features-section" className="py-12 lg:py-16 bg-stone-50 border-b border-stone-100" aria-labelledby="features-title">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 lg:mb-16">
-            <h2
-              id="features-title"
-              className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4"
-            >
-              {language === 'it' ? 'I Nostri Pilastri' : 'Our Pillars'}
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              {language === 'it'
-                ? 'Quattro elementi fondamentali che rendono i nostri prodotti unici'
-                : 'Four fundamental elements that make our products unique'}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl p-6 shadow-sm border border-stone-100 hover:shadow-md transition-shadow text-center sm:text-left"
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left Column: Title and Description */}
+            <div className="text-left">
+              <h2
+                id="features-title"
+                className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6"
               >
-                <div className="w-12 h-12 bg-terracotta-100 rounded-lg flex items-center justify-center mb-4 mx-auto sm:mx-0">
-                  <feature.icon className="h-6 w-6 text-terracotta-500" aria-hidden="true" />
+                {language === 'it' ? 'I Nostri Pilastri' : 'Our Pillars'}
+              </h2>
+              <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
+                {language === 'it'
+                  ? 'Quattro elementi fondamentali che rendono i nostri prodotti unici, garantendo qualità e autenticità in ogni morso.'
+                  : 'Four fundamental elements that make our products unique, ensuring quality and authenticity in every bite.'}
+              </p>
+            </div>
+
+            {/* Right Column: 2x2 Grid of Features */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-start p-5 rounded-xl bg-white border border-stone-100 shadow-sm hover:border-terracotta-200 transition-colors"
+                >
+                  <div className="w-10 h-10 bg-terracotta-50 rounded-lg flex items-center justify-center mb-3 text-terracotta-600">
+                    <feature.icon className="h-5 w-5" aria-hidden="true" />
+                  </div>
+                  <h3 className="font-semibold text-gray-900 text-base mb-1">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {feature.description}
+                  </p>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>

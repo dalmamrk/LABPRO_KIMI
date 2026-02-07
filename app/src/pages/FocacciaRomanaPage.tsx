@@ -4,8 +4,8 @@ import { BreadcrumbJsonLd } from '@/components/seo/JsonLd';
 import { Check, Circle } from 'lucide-react';
 
 // Images
-import focacciaRomanaDough from '@/assets/images/focaccia-romana-dough.webp';
 import focacciaRomanaProcess from '@/assets/images/focaccia-romana-process.webp';
+import focacciaRomanaHero from '@/assets/images/focaccia-romana.webp';
 
 export function FocacciaRomanaPage() {
   const { t, language } = useI18n();
@@ -28,15 +28,14 @@ export function FocacciaRomanaPage() {
       <BreadcrumbJsonLd items={breadcrumbs} />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-terracotta-500 to-terracotta-600 text-white py-16 lg:py-24 overflow-hidden">
-        {/* Background Image */}
+      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden text-white">
         <div className="absolute inset-0">
           <img
-            src={focacciaRomanaDough}
-            alt="Focaccia Romana Dough"
-            className="w-full h-full object-cover opacity-60"
+            src={focacciaRomanaHero}
+            alt={t.focacciaRomana.title}
+            className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-terracotta-600/20" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

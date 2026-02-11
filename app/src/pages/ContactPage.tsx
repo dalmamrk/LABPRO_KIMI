@@ -184,6 +184,17 @@ export function ContactPage() {
             <Mail className="mr-2 h-5 w-5" aria-hidden="true" />
             {t.contact.commercialValue}
           </a>
+
+          {/* FAQ Indicator */}
+          <div className="mt-10 flex flex-col items-center gap-2">
+            <span className="text-xs font-medium text-white/70 tracking-widest uppercase">
+              FAQ
+            </span>
+            <ChevronDown
+              className="h-6 w-6 text-white/70 animate-bounce"
+              aria-hidden="true"
+            />
+          </div>
         </div>
       </section>
 

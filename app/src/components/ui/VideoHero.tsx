@@ -7,7 +7,7 @@ import { ChevronDown } from 'lucide-react';
 import breadIcon from '@/assets/images/bread-icon.svg';
 
 // Poster Image
-import homeHeroBaker from '@/assets/images/home-hero-baker.webp';
+import homeHeroBaker from '@/assets/images/focaccia-romana-process.webp';
 
 // Videos
 import headerVideoWebm from '@/assets/videos/headervideo.webm';

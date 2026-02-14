@@ -5,7 +5,7 @@ import { BreadcrumbJsonLd } from '@/components/seo/JsonLd';
 
 // Images
 import paneHeroLoaf from '@/assets/images/pane-hero-loaf.webp';
-import focacciaRomanaDough from '@/assets/images/focaccia-romana-dough.webp';
+import focacciaRomanaDough from '@/assets/images/focaccia-romana.webp';
 import focacciaLigureHero from '@/assets/images/focaccia-ligure-hero.webp';
 import viennoiserieCroissants from '@/assets/images/viennoiserie-croissants.webp';
 import sourdoughStarter from '@/assets/images/sourdough-starter.webp';

@@ -51,7 +51,7 @@ export function VideoHero() {
                     {/* Hero Title */}
                     <h1
                         id="hero-title"
-                        className="mb-6 text-5xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl"
+                        className="mb-6 text-5xl font-bold tracking-tight text-terracotta-500 sm:text-6xl lg:text-7xl"
                     >
                         {t.home.heroTitle}
                     </h1>
@@ -61,8 +61,8 @@ export function VideoHero() {
                         {t.home.heroSubtitle}
                     </p>
 
-                    {/* CTA Buttons */}
-                    <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+                    {/* CTA Buttons - Vertical Layout */}
+                    <div className="flex flex-col items-center gap-4">
                         {/* Primary CTA - Filled Terracotta Pill */}
                         <Button
                             asChild

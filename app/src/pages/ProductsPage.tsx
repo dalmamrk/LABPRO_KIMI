@@ -125,27 +125,6 @@ export function ProductsPage() {
                     </div>
                 </div>
             </section>
-
-            {/* Sourdough CTA */}
-            <section className="py-16 lg:py-24 bg-white">
-                <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-                        {language === 'it' ? 'Il Segreto dei Nostri Prodotti' : 'The Secret of Our Products'}
-                    </h2>
-                    <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-                        {language === 'it'
-                            ? 'Tutti i nostri prodotti sono realizzati con lievito madre al 30%, per garantire digeribilità, conservazione naturale e un profilo aromatico unico.'
-                            : 'All our products are made with 30% sourdough, to ensure digestibility, natural preservation and a unique aromatic profile.'}
-                    </p>
-                    <Link
-                        to={`/${language}/lievito-madre`}
-                        className="inline-flex items-center px-6 py-3 bg-terracotta-500 text-white font-semibold rounded-full hover:bg-terracotta-600 transition-all duration-200 group"
-                    >
-                        {language === 'it' ? 'Scopri il lievito madre' : 'Discover sourdough'}
-                        <img src={breadIcon} alt="" className="h-5 w-5 ml-2 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
-                    </Link>
-                </div>
-            </section>
         </>
     );
 }

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useI18n } from '@/i18n/I18nContext';
 import { SEO } from '@/components/seo/SEO';
 import { BreadcrumbJsonLd } from '@/components/seo/JsonLd';
@@ -9,6 +10,7 @@ import farina from '@/assets/images/farina.webp';
 import introDough from '@/assets/images/home-intro-dough.webp';
 import paneSlicing from '@/assets/images/pane-slicing-detail.webp';
 import paneBasket from '@/assets/images/pane-basket.webp';
+import breadIcon from '@/assets/images/bread-icon.svg';
 
 export function BreadPage() {
   const { t, language } = useI18n();
@@ -151,6 +153,18 @@ export function BreadPage() {
                   )}
                   {pillar.conclusion && (
                     <p className="text-gray-600 italic">{pillar.conclusion}</p>
+                  )}
+                  {/* Add button for pillar 02 (Fermentazione Viva) */}
+                  {index === 1 && (
+                    <div className="mt-6">
+                      <Link
+                        to={`/${language}/lievito-madre`}
+                        className="inline-flex items-center px-6 py-3 bg-terracotta-500 text-white font-semibold rounded-full hover:bg-terracotta-600 transition-all duration-200 group"
+                      >
+                        {language === 'it' ? 'Scopri il lievito madre' : 'Discover sourdough'}
+                        <img src={breadIcon} alt="" className="h-5 w-5 ml-2 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
+                      </Link>
+                    </div>
                   )}
                 </div>
                 <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useI18n } from '@/i18n/I18nContext';
 import { SEO } from '@/components/seo/SEO';
-import { Wheat, Flame, Droplets, Circle } from 'lucide-react';
+import { Wheat } from 'lucide-react';
 
 // Bread icon
 import breadIcon from '@/assets/images/bread-icon.svg';
@@ -10,43 +10,13 @@ import { VideoHero } from '@/components/ui/VideoHero';
 
 // Images for other sections
 import paneHeroLoaf from '@/assets/images/pane-hero-loaf.webp';
-import focacciaRomanaHero from '@/assets/images/focaccia-romana-dough.webp';
+import focacciaRomanaHero from '@/assets/images/focaccia-romana.webp';
 import focacciaLigureHero from '@/assets/images/focaccia-ligure-hero.webp';
 
 export function HomePage() {
   const { t, language } = useI18n();
   const getLink = (path: string) => `/${language}${path}`;
 
-  const features = [
-    {
-      icon: Wheat,
-      title: language === 'it' ? 'Farina Tipo 2' : 'Type 2 Flour',
-      description: language === 'it'
-        ? 'Macinata a pietra per preservare tutti i nutrienti'
-        : 'Stone-ground to preserve all nutrients',
-    },
-    {
-      icon: Flame,
-      title: language === 'it' ? 'Lievito Madre' : 'Sourdough Starter',
-      description: language === 'it'
-        ? '30% di lievito madre vivo per una fermentazione naturale'
-        : '30% live sourdough starter for natural fermentation',
-    },
-    {
-      icon: Droplets,
-      title: language === 'it' ? 'Alta Idratazione' : 'High Hydration',
-      description: language === 'it'
-        ? '75% idratazione per una mollica cremosa'
-        : '75% hydration for a creamy crumb',
-    },
-    {
-      icon: Circle,
-      title: language === 'it' ? 'Sale Integrale' : 'Whole Salt',
-      description: language === 'it'
-        ? 'Ricco di oligoelementi naturali'
-        : 'Rich in natural trace elements',
-    },
-  ];
 
   const products = [
     {
@@ -143,29 +113,6 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* Pillars Banner - Desktop Only - Above About Teaser */}
-      <section className="hidden lg:block py-8 bg-white border-y border-stone-100" aria-label="Key pillars">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center text-center"
-              >
-                <div className="w-12 h-12 bg-terracotta-50 rounded-lg flex items-center justify-center mb-3 text-terracotta-600">
-                  <feature.icon className="h-6 w-6" aria-hidden="true" />
-                </div>
-                <h3 className="font-semibold text-gray-900 text-base mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* About Teaser Section */}
       <section className="py-16 lg:py-24 bg-terracotta-600 text-white" aria-labelledby="about-teaser-title">

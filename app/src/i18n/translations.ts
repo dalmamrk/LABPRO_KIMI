@@ -414,7 +414,7 @@ export const translations: Record<Language, Translations> = {
       ],
       applyTitle: 'Invia la tua candidatura',
       applyText: 'Se pensi di poter dare un contributo al nostro progetto, inviaci la tua candidatura',
-      applyEmail: 'info@lab-pro.it',
+      applyEmail: 'andrea@lab-pro.it',
     },
     contact: {
       title: 'Contatti',
@@ -714,7 +714,7 @@ export const translations: Record<Language, Translations> = {
       ],
       applyTitle: 'Send Your Application',
       applyText: 'If you think you can make a contribution to our project, send us your application to',
-      applyEmail: 'info@lab-pro.it',
+      applyEmail: 'andrea@lab-pro.it',
     },
     contact: {
       title: 'Contact',

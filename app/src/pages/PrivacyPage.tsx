@@ -57,7 +57,7 @@ export function PrivacyPage() {
                                 <p className="text-gray-700">Via Jonio 5, 10138 – Torino</p>
                                 <p className="text-gray-700">P.IVA: 13007570016</p>
                                 <p className="text-gray-700">
-                                    Email: <a href="mailto:info@lab-pro.it" className="text-terracotta-600 hover:text-terracotta-500">info@lab-pro.it</a>
+                                    Email: <a href="mailto:andrea@lab-pro.it" className="text-terracotta-600 hover:text-terracotta-500">andrea@lab-pro.it</a>
                                 </p>
                                 <p className="text-gray-700">
                                     PEC: <a href="mailto:labpro@pec.it" className="text-terracotta-600 hover:text-terracotta-500">labpro@pec.it</a>
@@ -181,69 +181,35 @@ export function PrivacyPage() {
                             <h2 className="text-2xl font-bold text-gray-900 mb-4">
                                 {language === 'it' ? 'Diritti dell\'Interessato' : 'Data Subject Rights'}
                             </h2>
-                            <p className="text-gray-700 leading-relaxed mb-4">
+                            <p className="text-gray-700 leading-relaxed">
                                 {language === 'it'
-                                    ? 'In conformità con il GDPR, l\'utente ha diritto di:'
-                                    : 'In accordance with GDPR, the user has the right to:'}
+                                    ? 'Gli utenti possono esercitare i diritti previsti dagli artt. 15-22 del GDPR, tra cui il diritto di accesso, rettifica, cancellazione, limitazione del trattamento e opposizione.'
+                                    : 'Users can exercise the rights provided by Articles 15-22 of the GDPR, including the right to access, rectification, deletion, restriction of processing and objection.'}
                             </p>
-                            <ul className="space-y-2">
-                                <li className="flex items-start gap-2">
-                                    <span className="text-terracotta-500 mt-1">•</span>
-                                    <span className="text-gray-700">
-                                        {language === 'it'
-                                            ? 'Accedere ai propri dati personali'
-                                            : 'Access their personal data'}
-                                    </span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-terracotta-500 mt-1">•</span>
-                                    <span className="text-gray-700">
-                                        {language === 'it'
-                                            ? 'Richiedere la rettifica di dati inesatti'
-                                            : 'Request correction of inaccurate data'}
-                                    </span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-terracotta-500 mt-1">•</span>
-                                    <span className="text-gray-700">
-                                        {language === 'it'
-                                            ? 'Richiedere la cancellazione dei dati ("diritto all\'oblio")'
-                                            : 'Request data deletion ("right to be forgotten")'}
-                                    </span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-terracotta-500 mt-1">•</span>
-                                    <span className="text-gray-700">
-                                        {language === 'it'
-                                            ? 'Limitare il trattamento dei dati'
-                                            : 'Restrict data processing'}
-                                    </span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-terracotta-500 mt-1">•</span>
-                                    <span className="text-gray-700">
-                                        {language === 'it'
-                                            ? 'Ricevere i dati in formato strutturato (portabilità)'
-                                            : 'Receive data in structured format (portability)'}
-                                    </span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-terracotta-500 mt-1">•</span>
-                                    <span className="text-gray-700">
-                                        {language === 'it'
-                                            ? 'Opporsi al trattamento'
-                                            : 'Object to processing'}
-                                    </span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-terracotta-500 mt-1">•</span>
-                                    <span className="text-gray-700">
-                                        {language === 'it'
-                                            ? 'Revocare il consenso in qualsiasi momento'
-                                            : 'Revoke consent at any time'}
-                                    </span>
-                                </li>
-                            </ul>
+                            <p className="text-gray-700 leading-relaxed mt-4">
+                                {language === 'it'
+                                    ? (
+                                        <>
+                                            Le richieste possono essere inviate all'indirizzo email:{' '}
+                                            <a href="mailto:andrea@lab-pro.it" className="text-terracotta-600 hover:text-terracotta-500 font-medium">
+                                                andrea@lab-pro.it
+                                            </a>
+                                        </>
+                                    )
+                                    : (
+                                        <>
+                                            Requests can be sent to the email address:{' '}
+                                            <a href="mailto:andrea@lab-pro.it" className="text-terracotta-600 hover:text-terracotta-500 font-medium">
+                                                andrea@lab-pro.it
+                                            </a>
+                                        </>
+                                    )}
+                            </p>
+                            <p className="text-gray-700 leading-relaxed mt-4">
+                                {language === 'it'
+                                    ? 'È inoltre possibile proporre reclamo al Garante per la Protezione dei Dati Personali.'
+                                    : 'It is also possible to lodge a complaint with the Italian Data Protection Authority (Garante per la Protezione dei Dati Personali).'}
+                            </p>
                         </div>
 
                         {/* Cookies */}
@@ -285,7 +251,7 @@ export function PrivacyPage() {
                             </p>
                             <div className="bg-terracotta-50 rounded-lg p-6">
                                 <p className="text-gray-700">
-                                    Email: <a href="mailto:info@lab-pro.it" className="text-terracotta-600 hover:text-terracotta-500 font-medium">info@lab-pro.it</a>
+                                    Email: <a href="mailto:andrea@lab-pro.it" className="text-terracotta-600 hover:text-terracotta-500 font-medium">andrea@lab-pro.it</a>
                                 </p>
                                 <p className="text-gray-700">
                                     PEC: <a href="mailto:labpro@pec.it" className="text-terracotta-600 hover:text-terracotta-500 font-medium">labpro@pec.it</a>

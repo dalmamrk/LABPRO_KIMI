@@ -18,7 +18,6 @@ export function Footer() {
     { label: t.nav.bread, path: '/pane-naturale' },
     { label: t.nav.focacciaRomana, path: '/focaccia-romana' },
     { label: t.nav.focacciaLigure, path: '/focaccia-ligure' },
-    { label: t.nav.sourdough, path: '/lievito-madre' },
   ];
 
   return (
